@@ -19,7 +19,9 @@ public class getInput
         String userInput = scanner.nextLine();
 
         if(userInput.equals("1")){
-            System.out.println("login");
+            System.out.println("======Enter details to login======");
+            login login = new login();
+            login.login();
         } else if (userInput.equals("2")) {
             System.out.println("======Provide details to Register======");
             login login = new login();

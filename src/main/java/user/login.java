@@ -1,15 +1,16 @@
 package user;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Random;
 import java.util.Scanner;
 
 public class login {
 
+    FileWriter storeUserDetails;
+
     public void register() throws IOException {
 
         Scanner input = new Scanner(System.in);
-        FileWriter storeUserDetails;
 
         System.out.println("Enter firstname:");
         String firstname = input.nextLine();
@@ -50,10 +51,10 @@ public class login {
             return;
         }
 
-//        if(email.matches("[^@.]")){
-//        } else {
-//            System.out.println("Email id cannot have any other special characters except @");
-//        }
+        if(email.matches("[^@.]")){
+        } else {
+            System.out.println("Email id cannot have any other special characters except @ and .");
+        }
 
         System.out.println("Confirm email:");
         String confirmEmail = input.nextLine();
@@ -173,4 +174,44 @@ public class login {
         storeUserDetails.close();
     }
 
+
+    public void login() throws IOException {
+
+        Scanner input = new Scanner(System.in);
+        String[] questions = new String[3];
+        questions[0] = "Enter your favourite color: ";
+        questions[1] = "Enter your favourite animal: ";
+        questions[2] = "Enter your favourite food: ";
+
+        Random generator = new Random();
+        Integer num = generator.nextInt(questions.length);
+
+        System.out.println("Enter EmailID: ");
+        String email_id = input.nextLine();
+
+        File file = new File("UserRegisteredDetails");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        String str;
+        while ((str = br.readLine()) != null) {
+
+            if (str.contains(email_id)) {
+                System.out.println("Enter password: ");
+                String password = input.nextLine();
+
+                if (str.contains(password)) {
+
+                    System.out.println(questions[num]);
+                    String answer = input.nextLine();
+
+                    if(str.contains(answer)){
+                        System.out.println("Login successfull");
+                    } else {
+                        System.out.println("Enter proper details to login.");
+                    }
+                }
+            }
+        }
+
+    }
 }
