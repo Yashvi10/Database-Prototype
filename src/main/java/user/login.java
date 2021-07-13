@@ -110,7 +110,7 @@ public class login {
             reenterPassword = input.nextLine();
         }
 
-        System.out.println("Provide answers to some questions for Multi Factor Authenticaton");
+        System.out.println("Provide answers to security questions");
         System.out.println("Please remember the provided answers");
 
         System.out.println("Enter your favourite color");
@@ -152,7 +152,7 @@ public class login {
             return;
         }
 
-        storeUserDetails = new FileWriter("UserRegisteredDetails");
+        storeUserDetails = new FileWriter("UserRegisteredDetails", true);
         storeUserDetails.write( "Firstname: " + firstname + "\n" + "Lastname: " + lastname);
 
         if (!email.equalsIgnoreCase(confirmEmail)) {
@@ -178,13 +178,7 @@ public class login {
     public void login() throws IOException {
 
         Scanner input = new Scanner(System.in);
-        String[] questions = new String[3];
-        questions[0] = "Enter your favourite color: ";
-        questions[1] = "Enter your favourite animal: ";
-        questions[2] = "Enter your favourite food: ";
 
-        Random generator = new Random();
-        Integer num = generator.nextInt(questions.length);
 
         System.out.println("Enter EmailID: ");
         String email_id = input.nextLine();
@@ -200,18 +194,36 @@ public class login {
                 String password = input.nextLine();
 
                 if (str.contains(password)) {
-
-                    System.out.println(questions[num]);
-                    String answer = input.nextLine();
-
-                    if(str.contains(answer)){
-                        System.out.println("Login successfull");
-                    } else {
-                        System.out.println("Enter proper details to login.");
-                    }
+                    System.out.println("Please answer a security question.");
+                    mfa();
                 }
             }
         }
+    }
 
+    public void mfa() throws FileNotFoundException, IOException {
+
+        Scanner input = new Scanner(System.in);
+        String[] questions = new String[3];
+        questions[0] = "Enter your favourite color: ";
+        questions[1] = "Enter your favourite animal: ";
+        questions[2] = "Enter your favourite food: ";
+
+        Random generator = new Random();
+        Integer num = generator.nextInt(questions.length);
+
+        System.out.println(questions[num]);
+        String answer = input.nextLine();
+
+        File file = new File("UserRegisteredDetails");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        String str1;
+        while ((str1 = br.readLine()) != null){
+
+            if(str1.contains(answer)){
+                System.out.println("Login Successful!!!");
+            }
+        }
     }
 }
