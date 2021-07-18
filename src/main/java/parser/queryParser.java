@@ -5,4 +5,5 @@
 package parser;
 public class queryParser {
 
+  
 }
