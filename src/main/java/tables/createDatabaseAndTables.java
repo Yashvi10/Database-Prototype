@@ -17,45 +17,43 @@ public class createDatabaseAndTables {
       int choice = scanner.nextInt();
 
       switch (choice) {
-      case 1:
-        System.out.println("Enter the name of schema");
-        String schemaName = scanner.next();
-        store = store + schemaName;
-        File createFolder = new File(store);
-        if (!createFolder.exists()) {
-          createFolder.mkdir();
-          System.out.println("The folder is created");
-        } else {
-          System.out.println("The schema already exists");
-        }
-        break;
-      case 2:
-        System.out.println("Enter the name of schema");
-        String schema = scanner.next();
-        store = "databases/" + schema;
-        File checkFolder = new File(store);
-        if (!checkFolder.exists()) {
-          System.out.println("The schema doesnt exist");
-        } else {
-          System.out.println("Enter the name of table");
-          String createTable = scanner.next();
-          store = store + "/" + createTable + ".txt";
-          System.out.println(store);
-          File tableFile = new File(store);
-          if (tableFile.exists()) {
-            System.out.println("The table already exists");
+        case 1:
+          System.out.println("Enter the name of schema");
+          String schemaName = scanner.next();
+          store = store + schemaName;
+          File createFolder = new File(store);
+          if (!createFolder.exists()) {
+            createFolder.mkdir();
+            System.out.println("The folder is created");
           } else {
-            tableFile.createNewFile();
-            System.out.println("The table has been created");
+            System.out.println("The schema already exists");
           }
-        }
+          break;
+        case 2:
+          System.out.println("Enter the name of schema");
+          String schema = scanner.next();
+          store = "databases/" + schema;
+          File checkFolder = new File(store);
+          if (!checkFolder.exists()) {
+            System.out.println("The schema doesnt exist");
+          } else {
+            System.out.println("Enter the name of table");
+            String createTable = scanner.next();
+            store = store + "/" + createTable + ".txt";
+            System.out.println(store);
+            File tableFile = new File(store);
+            if (tableFile.exists()) {
+              System.out.println("The table already exists");
+            } else {
+              tableFile.createNewFile();
+              System.out.println("The table has been created");
+            }
+          }
+          break;
 
-        break;
-      case 3:
-        break;
-
+        case 3:
+          System.exit(0);
       }
-
     }
   }
 
