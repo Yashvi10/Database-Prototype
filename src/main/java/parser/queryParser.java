@@ -7,6 +7,8 @@ package parser;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class queryParser {
 
@@ -49,6 +51,8 @@ public class queryParser {
         System.out.println("Invalid syntax. Please check the SQL user manual for query sytax");
       }
     }
+    identifier obj = new identifier();
+    obj.identifyTableSelect(mapping);
     return mapping;
   }
 

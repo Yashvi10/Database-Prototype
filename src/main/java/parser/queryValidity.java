@@ -10,7 +10,7 @@ public class queryValidity {
     int whereIndex = query.indexOf("where");
     int fromIndex = query.indexOf("from");
     int attributeIndex = query.indexOf("*");
-    if(fromIndex == -1) {
+    if(fromIndex == -1 || attributeIndex == -1) {
       return false;
     }
     if (attributeIndex != -1 && whereIndex != -1) {
@@ -44,8 +44,9 @@ public class queryValidity {
 //public static boolean validateDelete () {
 //
 //}
-//public static boolean validateCreate() {
-//
-//}
+public static boolean validateCreate(String query) {
+  return true;
+  
+}
   
 }
