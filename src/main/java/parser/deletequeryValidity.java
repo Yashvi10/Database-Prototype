@@ -1,12 +1,13 @@
 package parser;
+
 /**
- * @author Deeksha Sareen
- * This class is reponsible for checking the validity/ syntax of the SQL query
+ * @author Yashvi Lad
+ * This class is reponsible for checking the validity/ syntax of the SQL delete query
  *
  */
+public class deletequeryValidity {
 
-public class queryValidity {
-  public static boolean validateSelect(String query) {
+  public static boolean validateDelete (String query) {
     int whereIndex = query.indexOf("where");
     int fromIndex = query.indexOf("from");
     int attributeIndex = query.indexOf("*");
@@ -23,26 +24,21 @@ public class queryValidity {
       if (attributeIndex < fromIndex && attributeIndex < whereIndex) {
         return true;
       }
-    } 
+    }
     if (attributeIndex == -1 && whereIndex == -1) {
       return true;
-    } 
+    }
     if (attributeIndex != -1 && whereIndex == -1) {
       if (attributeIndex < fromIndex) {
         return true;
-      } 
+      }
     }
     if(attributeIndex == -1 && whereIndex != -1) {
-       if (fromIndex < whereIndex) {
+      if (fromIndex < whereIndex) {
         return true;
       }
     }
-   
     return false;
-
   }
-//public static boolean validateCreate() {
-//
-//}
-  
+
 }
