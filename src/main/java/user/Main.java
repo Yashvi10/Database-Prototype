@@ -32,6 +32,8 @@ public class Main {
 
 		System.out.println("Delete query parser: "+dparser.parsingAttributes((dquery2).toLowerCase()));
 
-	}
+    System.out.println(parser.parsingAttributes((query4).toLowerCase()));
+
+  }
 
 }
