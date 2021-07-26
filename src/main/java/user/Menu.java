@@ -4,17 +4,19 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Hello world!
- *
+ * File: Menu.java
+ * @author Yashvi Lad
+ * Purpose: It provides menu
+ * Description: This class offers menu to user for login and register
  */
-public class getInput 
+public class Menu
 {
-    public static void main( String[] args ) throws IOException {
+    public void menu() throws IOException {
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("================Relational Database Management System===============");
-        System.out.println("Press 1 to login\nPress 2 to register");
+        System.out.println("Press 1 to login\nPress 2 to register\nPress 3 to exit");
 
         String userInput = scanner.nextLine();
 
@@ -26,6 +28,8 @@ public class getInput
             System.out.println("======Provide details to Register======");
             login login = new login();
             login.register();
+        } else if (userInput.equals("3")) {
+            System.out.println("Exited");
         } else {
             System.out.println("Please select correct option!");
         }

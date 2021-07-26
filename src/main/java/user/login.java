@@ -1,12 +1,20 @@
 package user;
 
 import java.io.*;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
+/**
+ * File: login.java
+ * @author Yashvi Lad
+ * Purpose: It contains logic for login and registration part
+ * Description: This class will register user details for new user as well as contains login logic
+ */
 public class login {
 
     FileWriter storeUserDetails;
+    FileWriter mfaWriter;
+    Map<String, String> map = new HashMap<String, String>();
+    Menu menu = new Menu();
 
     public void register() throws IOException {
 
@@ -52,7 +60,6 @@ public class login {
         }
 
         if(email.matches("[^@.]")){
-        } else {
             System.out.println("Email id cannot have any other special characters except @ and .");
         }
 
@@ -153,7 +160,7 @@ public class login {
         }
 
         storeUserDetails = new FileWriter("UserRegisteredDetails", true);
-        storeUserDetails.write( "Firstname: " + firstname + "\n" + "Lastname: " + lastname);
+        storeUserDetails.write( "\nFirstname: " + firstname + "\n" + "Lastname: " + lastname);
 
         if (!email.equalsIgnoreCase(confirmEmail)) {
             storeUserDetails.write("\nEmailID: " + reenterEmail);
@@ -169,61 +176,105 @@ public class login {
             storeUserDetails.write("\nPassword: " + confirmPassword);
         }
 
-        storeUserDetails.write("\nFavourite color:  " + color + "\n" + "Favourite animal: " + animal + "\n"
-                + "Favourite food: " + food);
+        mfaWriter = new FileWriter("mfaAnswers.txt", true);
+        mfaWriter.write("\nEnter your favourite color:" + color +  " " + email +"\n" + "Enter your favourite animal:" + animal + " " +
+                email +"\n" + "Enter your favourite food:" + food + " " + email +"\n");
+        mfaWriter.close();
         storeUserDetails.close();
+        menu.menu();
     }
 
+    static String email_id;
+    static String answer;
 
     public void login() throws IOException {
 
         Scanner input = new Scanner(System.in);
 
-
         System.out.println("Enter EmailID: ");
-        String email_id = input.nextLine();
+        email_id = input.nextLine();
 
         File file = new File("UserRegisteredDetails");
+
         BufferedReader br = new BufferedReader(new FileReader(file));
 
         String str;
+        int count = 0;
         while ((str = br.readLine()) != null) {
-
             if (str.contains(email_id)) {
-                System.out.println("Enter password: ");
-                String password = input.nextLine();
-
-                if (str.contains(password)) {
-                    System.out.println("Please answer a security question.");
-                    mfa();
-                }
+                password();
+                count++;
             }
+        }
+        if(count == 0) {
+            System.out.println("Incorrect email");
         }
     }
 
-    public void mfa() throws FileNotFoundException, IOException {
+    public String password() throws IOException {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter password: ");
+        String password = input.nextLine();
+
+        File file = new File("UserRegisteredDetails");
+
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        String str;
+        int count = 0;
+        while ((str = br.readLine()) != null) {
+            if (str.contains(password)) {
+                System.out.println("Please answer a security question");
+                mfa();
+                count++;
+            }
+        }
+        if(count == 0) {
+            System.out.println("Incorrect password");
+        }
+        return password;
+    }
+
+    public void mfa() throws IOException {
 
         Scanner input = new Scanner(System.in);
         String[] questions = new String[3];
-        questions[0] = "Enter your favourite color: ";
-        questions[1] = "Enter your favourite animal: ";
-        questions[2] = "Enter your favourite food: ";
+        questions[0] = "Enter your favourite color ";
+        questions[1] = "Enter your favourite animal ";
+        questions[2] = "Enter your favourite food ";
 
         Random generator = new Random();
         Integer num = generator.nextInt(questions.length);
 
         System.out.println(questions[num]);
-        String answer = input.nextLine();
+        answer = input.nextLine();
 
-        File file = new File("UserRegisteredDetails");
-        BufferedReader br = new BufferedReader(new FileReader(file));
+        File file = new File("mfaAnswers.txt");
+        Scanner sc = new Scanner(file);
+        sc.useDelimiter("\\Z");
+        String line = sc.next();
+        String[] data = line.split("\\r?\\n");
 
-        String str1;
-        while ((str1 = br.readLine()) != null){
-
-            if(str1.contains(answer)){
-                System.out.println("Login Successful!!!");
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].contains(email_id)) {
+                String[] a = data[i].split(":");
+                String[] color = a[1].split(" ");
+                map.put(a[0], color[0]);
             }
+        }
+        int count = 0;
+        for (String key : map.keySet()) {
+
+            if (map.containsValue(answer)) {
+                count++;
+            }
+
+        }
+        if (count == 0) {
+            System.out.println("Login failed! Entered answer does not match");
+        } else {
+            System.out.println("Login successful!!");
         }
     }
 }
