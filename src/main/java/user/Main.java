@@ -1,40 +1,35 @@
 package user;
 
-import parser.*;
+import parser.deletequeryParser;
+import parser.deletequeryValidity;
+import parser.queryParser;
+import parser.queryValidity;
 
-import java.io.FileNotFoundException;
 import java.util.Locale;
-import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println("Please Enter the query for parsing:");
-		Scanner scanner = new Scanner(System.in);
-		String query = scanner.nextLine();
-		String[] queryToken = query.split(" ");
-		System.out.println(queryToken[0].toLowerCase());
+	public static void main(String[] args) {
 
-		switch (queryToken[0].toLowerCase()){
-			case "select":
-				queryValidity obj = new queryValidity();
-				queryParser parser = new queryParser();
-				System.out.println("Select query parser: "+parser.parsingAttributes((query).toLowerCase()));
-				break;
+		String query1 = "Select * from users where id = 1";
+		String query2 = "Select * from Deeksha";
+		String query3 = "Select from Deeksha";
+		String query4 = "Select * from Deeksha where id = 1 and id = 2";
+		String query5 = "Select * from Deeksha where";
+		queryParser parser = new queryParser();
 
-			case "update":
-				System.out.println("in update");
-				UpdateQueryValidity update = new UpdateQueryValidity();
-				update.updateQuery(query);
-				break;
+	    System.out.println("Select query parser: "+parser.parsingAttributes((query4).toLowerCase()));
 
-			case "delete":
-				deletequeryValidity delete = new deletequeryValidity();
-				deletequeryParser dparser = new deletequeryParser();
-				System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
-				break;
+		String dquery1 = "delete * from Deeksha where id = 1";
+		String dquery2 = "delete * from Deeksha";
+		String dquery3 = "delete from Yashvi";
+		String dquery4 = "delete * from Yashvi where id = 1 and id = 2";
+		String dquery5 = "delete * from Yashvi where";
 
-		}
+		deletequeryParser dparser = new deletequeryParser();
+
+		System.out.println("Delete query parser: "+dparser.parsingAttributes((dquery1).toLowerCase()));
+
   }
 
 }
