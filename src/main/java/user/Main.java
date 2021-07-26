@@ -1,5 +1,6 @@
 package user;
 
+import logs.readTable;
 import parser.*;
 
 import java.io.FileNotFoundException;
@@ -14,6 +15,8 @@ public class Main {
 		Menu menu = new Menu();
 		menu.menu();
 
+		readTable readTable = new readTable();
+
 		System.out.println("Please Enter the query for parsing:");
 		Scanner scanner = new Scanner(System.in);
 		String query = scanner.nextLine();
@@ -25,6 +28,7 @@ public class Main {
 				queryValidity obj = new queryValidity();
 				queryParser parser = new queryParser();
 				System.out.println("Select query parser: "+parser.parsingAttributes((query).toLowerCase()));
+				logs.readTable.print(query);
 				break;
 
 			case "update":
@@ -33,11 +37,11 @@ public class Main {
 				update.updateQuery(query);
 				break;
 
-			case "delete":
-				deletequeryValidity delete = new deletequeryValidity();
-				deletequeryParser dparser = new deletequeryParser();
-				System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
-				break;
+//			case "delete":
+//				deletequeryValidity delete = new deletequeryValidity();
+//				deletequeryParser dparser = new deletequeryParser();
+//				System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
+//				break;
 
 		}
   }
