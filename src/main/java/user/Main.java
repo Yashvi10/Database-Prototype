@@ -11,14 +11,17 @@ import parser.*;
 import tables.CreateDatabase;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 
-	    login login = new login();
-	    
+		Menu menu = new Menu();
+		menu.menu();
+
 		System.out.println("Please Enter the query for parsing:");
 		Scanner scanner = new Scanner(System.in);
 		String query = scanner.nextLine();
