@@ -194,6 +194,21 @@ public class login {
         System.out.println("Enter EmailID: ");
         email_id = input.nextLine();
 
+        if(email_id.matches("^[0-9]")){
+            System.out.println("Your input is not valid");
+            return;
+        }
+
+        if(email_id == null || email_id.isEmpty()){
+            System.out.println("Input cannot be empty!");
+            return;
+        }
+
+        if(email_id.matches("[^@.]")){
+            System.out.println("Email id cannot have any other special characters except @ and .");
+        }
+
+
         File file = new File("UserRegisteredDetails");
 
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -208,6 +223,7 @@ public class login {
         }
         if(count == 0) {
             System.out.println("Incorrect email");
+            menu.menu();
         }
     }
 
@@ -216,6 +232,16 @@ public class login {
 
         System.out.println("Enter password: ");
         String password = input.nextLine();
+
+        if(password.matches("^[0-9]")){
+            System.out.println("Your input is not valid");
+            return null;
+        }
+
+        if(password == null || password.isEmpty()){
+            System.out.println("Input cannot be empty!");
+            return null;
+        }
 
         File file = new File("UserRegisteredDetails");
 
@@ -232,6 +258,7 @@ public class login {
         }
         if(count == 0) {
             System.out.println("Incorrect password");
+            menu.menu();
         }
         return password;
     }
@@ -249,6 +276,16 @@ public class login {
 
         System.out.println(questions[num]);
         answer = input.nextLine();
+
+        if(answer.matches("^[0-9]")){
+            System.out.println("Your input is not valid");
+            return;
+        }
+
+        if(answer == null || answer.isEmpty()){
+            System.out.println("Input cannot be empty!");
+            return;
+        }
 
         File file = new File("mfaAnswers.txt");
         Scanner sc = new Scanner(file);
@@ -273,6 +310,7 @@ public class login {
         }
         if (count == 0) {
             System.out.println("Login failed! Entered answer does not match");
+            menu.menu();
         } else {
             System.out.println("Login successful!!");
         }

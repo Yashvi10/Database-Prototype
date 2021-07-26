@@ -20,7 +20,9 @@ public class Menu
 
         String userInput = scanner.nextLine();
 
-        if(userInput.equals("1")){
+        if(userInput.equals(" ") || userInput.isEmpty()) {
+            System.exit(0);
+        } else if(userInput.equals("1")){
             System.out.println("======Enter details to login======");
             login login = new login();
             login.login();
@@ -28,9 +30,12 @@ public class Menu
             System.out.println("======Provide details to Register======");
             login login = new login();
             login.register();
-        } else if (userInput.equals("3")) {
+        }
+        else if (userInput.equals("3")) {
             System.out.println("Exited");
-        } else {
+            System.exit(0);
+        }
+        else {
             System.out.println("Please select correct option!");
         }
 

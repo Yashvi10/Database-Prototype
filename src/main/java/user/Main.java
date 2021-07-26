@@ -5,6 +5,7 @@ import parser.queryValidity;
 
 import java.io.IOException;
 
+import logs.readTable;
 import parser.*;
 import tables.CreateDatabase;
 
@@ -13,6 +14,11 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
+
+		Menu menu = new Menu();
+		menu.menu();
+
+		readTable readTable = new readTable();
 
 		System.out.println("Please Enter the query for parsing:");
 		Scanner scanner = new Scanner(System.in);
@@ -26,6 +32,7 @@ public class Main {
 				queryValidity obj = new queryValidity();
 				queryParser parser = new queryParser();
 				System.out.println("Select query parser: "+parser.parsingAttributes((query).toLowerCase()));
+				logs.readTable.print(query);
 				break;
 
 			case "update":
