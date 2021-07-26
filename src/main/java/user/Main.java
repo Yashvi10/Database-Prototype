@@ -1,5 +1,4 @@
 package user;
-
 import parser.CreateTable;
 import parser.createParser;
 import parser.deletequeryParser;
@@ -11,38 +10,56 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import parser.*;
+import tables.CreateDatabase;
+
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Main {
 
-	public static void main(String[] args) {
-	  
-//		queryValidity obj = new queryValidity();
-//		String query1 = "Select * from users where id = 1";
-//		String query2 = "Select * from Deeksha";
-//		String query3 = "Select from Deeksha";
-//		String query4 = "Select * from Deeksha where id = 1 and id = 2";
-//		String query5 = "Select * from Deeksha where";
-//		queryParser parser = new queryParser();
-//
-//	    System.out.println("Select query parser: "+parser.parsingAttributes((query5).toLowerCase()));
-//
-//		deletequeryValidity delete = new deletequeryValidity();
-//
-//		String dquery1 = "delete * from users where id = 7";
-//		String dquery2 = "delete * from Yashvi";
-//		String dquery3 = "delete from Yashvi";
-//		String dquery4 = "delete * from Yashvi where id = 1 and id = 2";
-//		String dquery5 = "delete * from Yashvi where";
-//
-//		deletequeryParser dparser = new deletequeryParser();
-//        
-//		System.out.println("Delete query parser: "+dparser.parsingAttributes((dquery2).toLowerCase()));
-//
-//    System.out.println(parser.parsingAttributes((query4).toLowerCase()));
-    String query= "CREATE TABLE student (id INT PRIMARY KEY,name VARCHAR(100),last_name VARCHAR(100) FOREIGN KEY REFERENCES T1(last_name);";
-   // Matcher createTableSQL = CREATE_TABLE_PATTERN.matcher(query);
-    
-    CreateTable obj = new CreateTable(query);
-    obj.tableCreationCheck();
-  }
+	public static void main(String[] args) throws FileNotFoundException {
 
+		System.out.println("Please Enter the query for parsing:");
+		Scanner scanner = new Scanner(System.in);
+		String query = scanner.nextLine();
+		String[] queryToken = query.split(" ");
+		System.out.println(queryToken[1].toLowerCase());
+
+		switch (queryToken[0].toLowerCase()){
+			case "select":
+				queryValidity obj = new queryValidity();
+				queryParser parser = new queryParser();
+				System.out.println("Select query parser: "+parser.parsingAttributes((query).toLowerCase()));
+				break;
+
+			case "update":
+				System.out.println("in update");
+				UpdateQueryValidity update = new UpdateQueryValidity();
+				update.updateQuery(query);
+				break;
+
+			case "create":
+				if(queryToken[1].toLowerCase().equals("database")){
+					System.out.println("in create");
+					CreateDatabase create = new CreateDatabase();
+					create.createDatabases(query);
+				}
+				if(queryToken[2].toLowerCase().equals("table")){
+                  System.out.println("in create");
+                  CreateTable create = new CreateTable(query);
+                  create.tableCreationCheck();
+              }
+				break;
+
+			case "delete":
+				deletequeryValidity delete = new deletequeryValidity();
+				deletequeryParser dparser = new deletequeryParser();
+				System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
+				break;
+
+
+
+		}
+	}
 }
