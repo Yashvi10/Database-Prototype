@@ -31,10 +31,8 @@ public class UpdateQueryValidity {
   private void checkColumnExists(String col1, String col2, File f) throws FileNotFoundException {
 
     try {
-      BufferedReader br = null;
       System.out.println("hii");
       File file = new File(f.getPath());
-      br = new BufferedReader(new FileReader(file));
       String line = null;
       String[] rows = new String[100];
       String[] remainingRows = new String[100];
@@ -42,52 +40,39 @@ public class UpdateQueryValidity {
       sc.useDelimiter("\\Z");
       line = sc.next();
 
-      //System.out.println(line);
       String updateParts[] = line.split("\\r?\\n");
-      //System.out.println("update" + Arrays.toString(updateParts));
       int i = 0;
       int c = 0;
       for (String word : updateParts) {
         String[] temp = word.split(",");
-        //System.out.println("temp:"+Arrays.toString(updateParts));
         String tempstr = temp[0] + "," + temp[1] + "," + temp[2];
-        //System.out.println("tempstr:"+tempstr);
         if (tempstr.contains(col2)) {
           rows[i] = tempstr;
         } else {
           remainingRows[c] = tempstr;
-          //System.out.println("rem:" + remainingRows[c]);
           c++;
         }
       }
       String[] splitCol = col1.split("=");
       for (int x = 0; x <= i; x++) {
         String[] tempArr = rows[x].split(",");
-        //System.out.println("tempARR" + tempArr);
         String str = null;
         for (int y = 0; y < tempArr.length; y++) {
           if (tempArr[y].contains(splitCol[0])) {
             str = tempArr[y];
-            //System.out.println("str" + str);
           }
         }
         if (rows[x].contains(splitCol[0])) {
           rows[x] = rows[x].replace(str, col1);
-          // System.out.println("rowsodx"+rows[x]);
         }
       }
 
-      FileWriter myWriter = new FileWriter(file, true);
+      FileWriter myWriter = new FileWriter(file);
       myWriter.write(rows[0] + "\n");
-      //System.out.println("rows:"+rows[0]);
       for (int s = 0; s < updateParts.length - 1; s++) {
-
         myWriter.write(remainingRows[s] + "\n");
-        //System.out.println(("remmmaining"+" "+remainingRows[s]));
       }
-
       myWriter.close();
-
 
     } catch (Exception e) {
       System.out.println(e);
@@ -95,7 +80,6 @@ public class UpdateQueryValidity {
   }
 
   public void checkDbAndTableExists(String folder, String table, String column1, String column2) throws FileNotFoundException {
-    //System.out.println("in check" + folder);
     store = store + folder;
     boolean t;
     File createFolder = new File(store);
@@ -109,6 +93,5 @@ public class UpdateQueryValidity {
     } else {
       System.out.println("The schema doesn't exists");
     }
-
   }
 }
