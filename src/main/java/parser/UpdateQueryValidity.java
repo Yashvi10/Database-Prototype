@@ -1,3 +1,8 @@
+/**
+ * @author Sai Vaishnavi Jupudi
+ * This class is reponsible for checking the validity/ syntax of the SQL update query
+ *
+ */
 package parser;
 
 import java.io.*;
