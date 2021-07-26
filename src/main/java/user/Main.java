@@ -6,9 +6,6 @@ import parser.deletequeryValidity;
 import parser.queryParser;
 import parser.queryValidity;
 
-import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import parser.*;
 import tables.CreateDatabase;
@@ -20,6 +17,8 @@ public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
+	    login login = new login();
+	    
 		System.out.println("Please Enter the query for parsing:");
 		Scanner scanner = new Scanner(System.in);
 		String query = scanner.nextLine();
