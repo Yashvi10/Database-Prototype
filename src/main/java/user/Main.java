@@ -1,4 +1,14 @@
 package user;
+import parser.CreateTable;
+import parser.createParser;
+import parser.deletequeryParser;
+import parser.deletequeryValidity;
+import parser.queryParser;
+import parser.queryValidity;
+
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import parser.*;
 import tables.CreateDatabase;
@@ -35,6 +45,11 @@ public class Main {
 					CreateDatabase create = new CreateDatabase();
 					create.createDatabases(query);
 				}
+				if(queryToken[2].toLowerCase().equals("table")){
+                  System.out.println("in create");
+                  CreateTable create = new CreateTable(query);
+                  create.tableCreationCheck();
+              }
 				break;
 
 			case "delete":
@@ -47,5 +62,4 @@ public class Main {
 
 		}
 	}
-
 }

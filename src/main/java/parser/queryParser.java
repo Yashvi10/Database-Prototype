@@ -4,6 +4,7 @@
  */
 package parser;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -53,7 +54,24 @@ public class queryParser {
     }
     identifier obj = new identifier();
     obj.identifyTableSelect(mapping);
+//    
+//    if(splitQuery[0].compareToIgnoreCase("CREATE") == 0) {
+//      checkValidity valid = new checkValidity();
+//      if (valid.checkCreate(query) == true) {
+//        if (splitQuery[1].equalsIgnoreCase("Table")) {
+//          String store = "databases/Deeksha" ;
+//          File checkFolder = new File(store);
+//          if (!checkFolder.exists()) {
+//            System.out.println("The schema doesnt exist");
+//          } else {
+//            store = store + "/" + splitQuery[2] + ".txt";
+//        }
+//      }
+//        
+//        
+//    }
+ //   }
+    
     return mapping;
-  }
-
-}
+  
+}}
