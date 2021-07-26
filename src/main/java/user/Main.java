@@ -1,9 +1,9 @@
 package user;
 
 import parser.*;
+import tables.CreateDatabase;
 
 import java.io.FileNotFoundException;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +14,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		String query = scanner.nextLine();
 		String[] queryToken = query.split(" ");
-		System.out.println(queryToken[0].toLowerCase());
+		System.out.println(queryToken[1].toLowerCase());
 
 		switch (queryToken[0].toLowerCase()){
 			case "select":
@@ -29,11 +29,21 @@ public class Main {
 				update.updateQuery(query);
 				break;
 
+			case "create":
+				if(queryToken[1].toLowerCase().equals("database")){
+					System.out.println("in create");
+					CreateDatabase create = new CreateDatabase();
+					create.createDatabases(query);
+				}
+				break;
+
 			case "delete":
 				deletequeryValidity delete = new deletequeryValidity();
 				deletequeryParser dparser = new deletequeryParser();
 				System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
 				break;
+
+
 
 		}
 	}
