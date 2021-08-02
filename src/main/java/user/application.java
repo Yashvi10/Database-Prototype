@@ -8,8 +8,6 @@ import java.util.Scanner;
 
 import parser.CreateTable;
 import parser.UpdateQueryValidity;
-import parser.deletequeryParser;
-import parser.deletequeryValidity;
 import parser.queryParser;
 import tables.CreateDatabase;
 
@@ -50,10 +48,10 @@ public class application {
             break;
 
         case "delete":
-            deletequeryValidity delete = new deletequeryValidity();
-            deletequeryParser dparser = new deletequeryParser();
-            System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
-            break;
+//            deletequeryValidity delete = new deletequeryValidity();
+//            deletequeryParser dparser = new deletequeryParser();
+//            System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
+//            break;
 
 
 
