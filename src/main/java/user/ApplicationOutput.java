@@ -27,9 +27,9 @@ public class ApplicationOutput {
 
 			List<String> selectionOptions = getSelectionOptions();
 			
-			System.out.println("=============================================================");
-			System.out.println("                         DBMS                         ");
-			System.out.println("=============================================================");
+			System.out.println("================================================================");
+			System.out.println("                          RDBMS                         ");
+			System.out.println("================================================================");
 			System.out.println();
 			int sel = cases.printSelection(selectionOptions);
 			if(sel == 1) {
