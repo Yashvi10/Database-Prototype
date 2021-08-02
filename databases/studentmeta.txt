@@ -1,0 +1,2 @@
+0-id-INT-PRIMARY-KEY
+1-name-VARCHAR
