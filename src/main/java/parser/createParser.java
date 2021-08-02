@@ -13,10 +13,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * @author HP
- *
- */
 //boolean is_correct =queryParser.getQueryDetails("CREATE TABLE remote.db1.student (id INT PRIMARY KEY,name VARCHAR(100),last_name VARCHAR(100) FOREIGN KEY REFERENCES T1(last_name);");
 
 public class createParser {
