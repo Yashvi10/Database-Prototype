@@ -1,39 +1,36 @@
 package logs;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class readTable {
 
-    private static FileWriter log = null;
-    private static boolean fileOut = true;
+  private static FileWriter log = null;
+  private static boolean fileOut = true;
 
-//    public static void println(String output) {
-//      print(output+"\n");
-//    }
+  public static void print(String output) {
+    LocalDateTime localDateTime = LocalDateTime.now();
+    if (fileOut) {
 
-    public static void print(String output) {
-      if (fileOut) {
+      String path = "src/main/java/logs/log.txt";
+      File file = new File(path);
+      try {
 
-        File file = new File("src/main/java/logs/log.txt");
-        try {
+        FileWriter fileWriter = new FileWriter(file,true);
 
-          ObjectOutputStream objectOut = new ObjectOutputStream(new FileOutputStream(file));
+        fileWriter.write(output + " " +localDateTime + "\n") ;
 
-//          System.out.println(output);
-          objectOut.writeObject(output);
+        fileWriter.flush();
+        fileWriter.close();
 
-          objectOut.flush();
-          objectOut.close();
-
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-      } else {
-        System.out.print(output);
+      } catch (IOException e) {
+        e.printStackTrace();
       }
+    } else {
+      System.out.print(output);
     }
-//    public static void setConsoleOut() {
-//      fileOut = false;
-//    }
+  }
 }
 

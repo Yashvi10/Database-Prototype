@@ -23,6 +23,7 @@ public class Main {
 		System.out.println("Please Enter the query for parsing:");
 		Scanner scanner = new Scanner(System.in);
 		String query = scanner.nextLine();
+		logs.readTable.print(query);
 		String[] queryToken = query.split(" ");
 		System.out.println(queryToken[1].toLowerCase());
 
@@ -32,7 +33,6 @@ public class Main {
 				queryValidity obj = new queryValidity();
 				queryParser parser = new queryParser();
 				System.out.println("Select query parser: "+parser.parsingAttributes((query).toLowerCase()));
-				logs.readTable.print(query);
 				break;
 
 			case "update":
