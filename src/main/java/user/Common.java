@@ -1,11 +1,11 @@
 package user;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen: This class creates an instance of the prompt.
+ * prompt recurs until the user enters exit.
  *
  */
 public class Common {
