@@ -20,6 +20,7 @@ public class application {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter Query for Processing");
 		String query = input.nextLine();
+		logs.readTable.print(query);
 		String[] Token = query.split(" ");
 		String[] queryToken = null;
 		if (Token[0].toLowerCase().equals("use")) {
