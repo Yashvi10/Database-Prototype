@@ -19,7 +19,6 @@ public class Database {
 			database.setDatabaseName(databasename);
 		}
 	}
-
 	public static Database instance() {
 		return database;
 	}
