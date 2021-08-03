@@ -3,29 +3,45 @@
  */
 package user;
 
+import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
-
+import Resources.Database;
 import parser.CreateTable;
 import parser.UpdateQueryValidity;
-import parser.queryParser;
+import parser.SelectParser;
 import tables.CreateDatabase;
 
 public class application {
 
   public void Application() throws IOException {
  
-    System.out.println("Please Enter the query for parsing:");
-    Scanner scanner = new Scanner(System.in);
-    String query = scanner.nextLine();
-    logs.readTable.print(query);
-    String[] queryToken = query.split(" ");
-    System.out.println(queryToken[1].toLowerCase());
+	  Common obj = new Common();
+      String queryToken[] =  obj.takeinput();
+	  if(!queryToken[0].equals("use") ) {
+    	System.out.println("No database selected. Select a database first.");
+    	Application();
+    }
+    if(queryToken[0].equals("use")) {
+    	 
+    	 String store = "databases/" + queryToken[1].replace(";", "");
+         File checkFolder = new File(store);
+         if (!checkFolder.exists()) {
+           System.out.println("The schema doesn't exist");
+         }
+         else {
+        	 Database.setDatabase(store);
+        	 Database db = Database.instance();
+        	 db.setDatabaseName(store);
+         }
+    }
 
+
+    String queryToken2[] = obj.takeinput();
+    String query = "";
     switch (queryToken[0].toLowerCase()){
         case "select":
-            queryParser parser = new queryParser();
-            parser.parsingAttributes((query).toLowerCase());
+            SelectParser parser = new SelectParser();
+            parser.parsingAttributes(queryToken2);
             break;
 
         case "update":
