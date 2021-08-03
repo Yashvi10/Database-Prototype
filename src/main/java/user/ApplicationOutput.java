@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen : Creates an instance of the RDBS application.
  *
  */
 public class ApplicationOutput {

@@ -6,7 +6,7 @@ import java.io.IOException;
 import Resources.Database;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen : This class creates a new table and a corresponding meta data file
  *
  */
 public class CreateTable {
@@ -52,7 +52,6 @@ public class CreateTable {
 				for (int i = 0; i < tableCols.length; i++) {
 					splitDataType[i] = tableCols[i].split(" ")[1];
 					datatype = splitDataType[i];
-					// System.out.println("Th");
 					if (i == (tableCols.length - 1)) {
 						if (datatype.equalsIgnoreCase("int"))
 							tablecolwriter.write("|  Int  |");
