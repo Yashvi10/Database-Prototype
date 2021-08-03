@@ -6,7 +6,7 @@ package Resources;
  */
 public class Database {
 
-	private String databaseName;
+	private static String databaseName;
 
 	private Database() {
 	}
@@ -19,7 +19,6 @@ public class Database {
 			database.setDatabaseName(databasename);
 		}
 	}
-
 	public static Database instance() {
 		return database;
 	}
@@ -28,7 +27,7 @@ public class Database {
 		this.databaseName = databasename;
 	}
 
-	public static Database getDatabase() {
-		return database;
+	public static String getDatabase() {
+		return databaseName;
 	}
 }
