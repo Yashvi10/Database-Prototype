@@ -1,2 +1,0 @@
-select * from deeksha where id = 1; 2021-08-02T20:21:57.674407500
-select * from deeksha where id = 5; 2021-08-03T10:24:39.962916700

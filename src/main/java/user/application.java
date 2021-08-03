@@ -24,6 +24,7 @@ public class application {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter Query for Processing");
 		String query = input.nextLine();
+		logs.readTable.print(query);
 		String[] Token = query.split(" ");
 		String[] queryToken = null;
 		if (Token[1].toLowerCase().equals("database")) {
@@ -50,6 +51,7 @@ public class application {
 					db.setDatabaseName(store);
 					System.out.println("Enter Query for Processing");
 					query = input.nextLine();
+					logs.readTable.print(query);
 					queryToken = query.split(" ");
 				}
 

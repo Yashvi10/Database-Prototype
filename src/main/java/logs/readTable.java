@@ -1,5 +1,6 @@
 package logs;
 
+import user.login;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,26 +9,30 @@ import java.time.LocalDateTime;
 
 /**
  * File: readTable.java
+ *
  * @author Yashvi Lad
  * Purpose: Query log printing
  * Description: This class will write all query logs in one text file.
  */
 public class readTable {
 
-  private static FileWriter log = null;
   private static boolean fileOut = true;
 
+  /*
+   * This method writes query logs into text file with date-time, user id  and message
+   * */
   public static void print(String output) {
     LocalDateTime localDateTime = LocalDateTime.now();
+    login login = new login();
     if (fileOut) {
 
-      String path = "src/main/java/logs/log.txt";
+      String path = "LogAndDumpFiles/QueryLogs/queryLog.txt";
       File file = new File(path);
       try {
 
-        FileWriter fileWriter = new FileWriter(file,true);
+        FileWriter fileWriter = new FileWriter(file, true);
 
-        fileWriter.write(output + " " +localDateTime + "\n") ;
+        fileWriter.write(user.login.getEmail_id() + "\t" + output + "\t" + localDateTime + "\n");
 
         fileWriter.flush();
         fileWriter.close();
@@ -39,5 +44,6 @@ public class readTable {
       System.out.print(output);
     }
   }
+
 }
 

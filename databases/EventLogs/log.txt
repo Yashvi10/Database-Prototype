@@ -6,3 +6,4 @@ krina	Schema does not exist! Executed in 0mdeeksha;	Database Created Successfull
 sonal	Database Created Successfully!	Executed in 0ms
 sonal	Database Created Successfully!	Executed in 0ms
 testing123	Database Created Successfully!	Executed in 16ms
+null	thirdtable	Table Created Successfully!	Executed in 10568ms

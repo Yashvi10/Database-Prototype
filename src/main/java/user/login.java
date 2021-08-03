@@ -5,271 +5,287 @@ import java.util.*;
 
 /**
  * File: login.java
- * 
+ *
  * @author Yashvi Lad Purpose: It contains logic for login and registration part
- *         Description: This class will register user details for new user as
- *         well as contains login logic
+ * Description: This class will register user details for new user as
+ * well as contains login logic
  */
 public class login {
 
-	FileWriter storeUserDetails;
-	FileWriter mfaWriter;
-	Map<String, String> map = new HashMap<String, String>();
+  public static String getEmail_id() {
+    return email_id;
+  }
 
-	public void register() throws IOException {
+  public static void setEmail_id(String email_id) {
+    login.email_id = email_id;
+  }
 
-		Scanner input = new Scanner(System.in);
+  FileWriter storeUserDetails;
+  FileWriter mfaWriter;
+  Map<String, String> map = new HashMap<String, String>();
 
-		System.out.println("Enter firstname:");
-		String firstname = input.nextLine();
+  //this method gets all the details from user to register into the system
+  public void register() throws IOException {
 
-		if (firstname.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    Scanner input = new Scanner(System.in);
 
-		if (firstname == null || firstname.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
+    System.out.println("Enter firstname:");
+    String firstname = input.nextLine();
 
-		System.out.println("Enter lastname:");
-		String lastname = input.nextLine();
+    if (firstname.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		if (lastname.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    if (firstname == null || firstname.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
 
-		if (lastname == null || lastname.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
+    System.out.println("Enter lastname:");
+    String lastname = input.nextLine();
 
-		System.out.println("Enter email:");
-		String email = input.nextLine();
+    if (lastname.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		if (email.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    if (lastname == null || lastname.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
 
-		if (email == null || email.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
+    System.out.println("Enter email:");
+    String email = input.nextLine();
 
-		if (email.matches("[^@.]")) {
-			System.out.println("Email id cannot have any other special characters except @ and .");
-		}
+    if (email.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		System.out.println("Confirm email:");
-		String confirmEmail = input.nextLine();
+    if (email == null || email.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
 
-		if (confirmEmail.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    if (email.matches("[^@.]")) {
+      System.out.println("Email id cannot have any other special characters except @ and .");
+    }
 
-		if (confirmEmail == null || confirmEmail.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
-		String reenterEmail = null;
-		if (!email.equalsIgnoreCase(confirmEmail)) {
-			System.out.println("Email entered does not match.");
+    System.out.println("Confirm email:");
+    String confirmEmail = input.nextLine();
 
-			System.out.println("Please re-enter email:");
-			reenterEmail = input.nextLine();
+    if (confirmEmail.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		}
+    if (confirmEmail == null || confirmEmail.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
+    String reenterEmail = null;
+    if (!email.equalsIgnoreCase(confirmEmail)) {
+      System.out.println("Email entered does not match.");
 
-		System.out.println("Enter password:");
-		String password = input.nextLine();
+      System.out.println("Please re-enter email:");
+      reenterEmail = input.nextLine();
 
-		if (password.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    }
 
-		if (password == null || password.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
+    System.out.println("Enter password:");
+    String password = input.nextLine();
 
-		System.out.println("Confirm password:");
-		String confirmPassword = input.nextLine();
+    if (password.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		if (confirmPassword.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    if (password == null || password.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
 
-		if (confirmPassword == null || confirmPassword.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
-		String reenterPassword = null;
-		if (!password.equals(confirmPassword)) {
-			System.out.println("Password does not match");
+    System.out.println("Confirm password:");
+    String confirmPassword = input.nextLine();
 
-			System.out.println("Please re-enter proper password");
-			reenterPassword = input.nextLine();
-		}
+    if (confirmPassword.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		System.out.println("Provide answers to security questions");
-		System.out.println("Please remember the provided answers");
+    if (confirmPassword == null || confirmPassword.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
+    String reenterPassword = null;
+    if (!password.equals(confirmPassword)) {
+      System.out.println("Password does not match");
 
-		System.out.println("Enter your favourite color");
-		String color = input.nextLine();
+      System.out.println("Please re-enter proper password");
+      reenterPassword = input.nextLine();
+    }
 
-		if (color.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    System.out.println("Provide answers to security questions");
+    System.out.println("Please remember the provided answers");
 
-		if (color == null || color.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
+    System.out.println("Enter your favourite color");
+    String color = input.nextLine();
 
-		System.out.println("Enter your favourite animal");
-		String animal = input.nextLine();
+    if (color.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		if (animal.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    if (color == null || color.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
 
-		if (animal == null || animal.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
+    System.out.println("Enter your favourite animal");
+    String animal = input.nextLine();
 
-		System.out.println("Enter your favourite food");
-		String food = input.nextLine();
+    if (animal.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		if (food.matches("^[0-9]")) {
-			System.out.println("Your input is not valid");
-			return;
-		}
+    if (animal == null || animal.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
 
-		if (food == null || food.isEmpty()) {
-			System.out.println("Input cannot be empty!");
-			return;
-		}
+    System.out.println("Enter your favourite food");
+    String food = input.nextLine();
 
-		storeUserDetails = new FileWriter("UserRegisteredDetails", true);
-		storeUserDetails.write(System.lineSeparator());
-		storeUserDetails.write("\nFirstname: " + firstname + "\n" + "Lastname: " + lastname);
+    if (food.matches("^[0-9]")) {
+      System.out.println("Your input is not valid");
+      return;
+    }
 
-		if (!email.equalsIgnoreCase(confirmEmail)) {
-			storeUserDetails.write("\nEmailID: " + reenterEmail);
-		} else {
-			storeUserDetails.write("\nEmailID: " + confirmEmail);
-		}
+    if (food == null || food.isEmpty()) {
+      System.out.println("Input cannot be empty!");
+      return;
+    }
 
-		System.out.println("\n");
+    storeUserDetails = new FileWriter("UserRegisteredDetails", true);
+    storeUserDetails.write(System.lineSeparator());
+    storeUserDetails.write("\nFirstname: " + firstname + "\n" + "Lastname: " + lastname);
 
-		if (!password.equals(confirmPassword)) {
-			storeUserDetails.write("\nPassword: " + reenterPassword);
-		} else {
-			storeUserDetails.write("\nPassword: " + confirmPassword);
-		}
+    if (!email.equalsIgnoreCase(confirmEmail)) {
+      storeUserDetails.write("\nEmailID: " + reenterEmail);
+    } else {
+      storeUserDetails.write("\nEmailID: " + confirmEmail);
+    }
 
-		mfaWriter = new FileWriter("mfaAnswers.txt", true);
-		mfaWriter.write("\nEnter your favourite color:" + color + " " + email + "\n" + "Enter your favourite animal:"
-				+ animal + " " + email + "\n" + "Enter your favourite food:" + food + " " + email + "\n");
-		mfaWriter.close();
-		storeUserDetails.close();
-	}
+    System.out.println("\n");
 
-	static String email_id;
-	static String answer;
+    if (!password.equals(confirmPassword)) {
+      storeUserDetails.write("\nPassword: " + reenterPassword);
+    } else {
+      storeUserDetails.write("\nPassword: " + confirmPassword);
+    }
 
-	public boolean login() throws IOException {
+    mfaWriter = new FileWriter("mfaAnswers.txt", true);
+    mfaWriter.write("\nEnter your favourite color:" + color + " " + email + "\n" + "Enter your favourite animal:" + animal + " " + email + "\n" + "Enter your favourite food:" + food + " " + email + "\n");
+    mfaWriter.close();
+    storeUserDetails.close();
+  }
 
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter EmailID: ");
-		email_id = input.nextLine();
-		File file = new File("UserRegisteredDetails");
-		BufferedReader br = new BufferedReader(new FileReader(file));
-		String str;
-		int count = 0;
-		while ((str = br.readLine()) != null) {
-			if (str.contains(email_id)) {
-				input = new Scanner(System.in);
+  static String email_id;
+  static String answer;
 
-				System.out.println("Enter password: ");
-				String password = input.nextLine();
-				String str2;
-				int count2 = 0;
-				while ((str2 = br.readLine()) != null) {
-					
-					if (str2.contains(password)) {
-						count2++;
-						System.out.println("Please answer a security question");
-						if (mfa() == true) {
-							return true;
-						} else {
-							return false;
-						}
-					}
-				}
-				if (count2 == 0) {
-					System.out.println("Incorrect password");
+  /*
+   * this method contains logic that asks user to enter login credentials
+   * It checks if the entered credentials are in record or not and allows users access grants based on it.
+   * */
+  public boolean login() throws IOException {
 
-				}
-				count++;
-			}
-		}
-		if (count == 0) {
-			System.out.println("Incorrect email");
-			return false;
-		}
-		return true;
-	}
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter EmailID: ");
+    email_id = input.nextLine();
+    File file = new File("UserRegisteredDetails");
+    BufferedReader br = new BufferedReader(new FileReader(file));
+    String str;
+    int count = 0;
+    while ((str = br.readLine()) != null) {
+      if (str.contains(email_id)) {
+        input = new Scanner(System.in);
 
-	public boolean mfa() throws IOException {
+        System.out.println("Enter password: ");
+        String password = input.nextLine();
+        String str2;
+        int count2 = 0;
+        while ((str2 = br.readLine()) != null) {
 
-		Scanner input = new Scanner(System.in);
-		String[] questions = new String[3];
-		questions[0] = "Enter your favourite color ";
-		questions[1] = "Enter your favourite animal ";
-		questions[2] = "Enter your favourite food ";
+          if (str2.contains(password)) {
+            count2++;
+            System.out.println("Please answer a security question");
+            if (mfa() == true) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        }
+        if (count2 == 0) {
+          System.out.println("Incorrect password");
 
-		Random generator = new Random();
-		Integer num = generator.nextInt(questions.length);
+        }
+        count++;
+      }
+    }
+    if (count == 0) {
+      System.out.println("Incorrect email");
+      return false;
+    }
+    return true;
+  }
 
-		System.out.println(questions[num]);
-		answer = input.nextLine();
+  /*
+   * this method is called if the user entered credentials are correct to answer one random question-
+   * as a Multi Factor Authentication
+   * */
+  public boolean mfa() throws IOException {
 
-		File file = new File("mfaAnswers.txt");
-		Scanner sc = new Scanner(file);
-		sc.useDelimiter("\\Z");
-		String line = sc.next();
-		String[] data = line.split("\\r?\\n");
+    Scanner input = new Scanner(System.in);
+    String[] questions = new String[3];
+    questions[0] = "Enter your favourite color ";
+    questions[1] = "Enter your favourite animal ";
+    questions[2] = "Enter your favourite food ";
 
-		for (int i = 0; i < data.length; i++) {
-			if (data[i].contains(email_id)) {
-				String[] a = data[i].split(":");
-				String[] color = a[1].split(" ");
-				map.put(a[0], color[0]);
-			}
-		}
-		int count = 0;
-		for (String key : map.keySet()) {
-			if (map.containsValue(answer)) {
-				count++;
-			}
-		}
-		if (count == 0) {
-			System.out.println("Login failed! Entered answer does not match");
-			return false;
-		} else {
-			System.out.println("Login successful!!");
-			return true;
-		}
-	}
+    Random generator = new Random();
+    Integer num = generator.nextInt(questions.length);
+
+    System.out.println(questions[num]);
+    answer = input.nextLine();
+
+    File file = new File("mfaAnswers.txt");
+    Scanner sc = new Scanner(file);
+    sc.useDelimiter("\\Z");
+    String line = sc.next();
+    String[] data = line.split("\\r?\\n");
+
+    for (int i = 0; i < data.length; i++) {
+      if (data[i].contains(email_id)) {
+        String[] a = data[i].split(":");
+        String[] color = a[1].split(" ");
+        map.put(a[0], color[0]);
+      }
+    }
+    int count = 0;
+    for (String key : map.keySet()) {
+      if (map.containsValue(answer)) {
+        count++;
+      }
+    }
+    if (count == 0) {
+      System.out.println("Login failed! Entered answer does not match");
+      return false;
+    } else {
+      System.out.println("Login successful!!");
+      return true;
+    }
+  }
 
 }
