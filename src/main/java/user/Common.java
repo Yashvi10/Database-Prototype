@@ -1,5 +1,7 @@
 package user;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -8,12 +10,23 @@ import java.util.Scanner;
  */
 public class Common {
 
-	public String[] takeinput() {
+	private Common() {}
+	
+	private static Common common;
+	
+	public static Common getInstance() {
+		if(common == null)
+			common = new Common();
+		return common;
+	}
+	
+	public void takeinput() throws IOException {
 		
-		    System.out.println("Please Enter the query for parsing:");
+		    System.out.println("Enter query ~");
 		    Scanner scanner = new Scanner(System.in);
 		    String query = scanner.nextLine();
-		    String[] queryToken = query.toLowerCase().split(" ");
-		    return queryToken;
+		    application obj = new application();
+		    obj.Application(query);
+		    takeinput();
 	}
 }

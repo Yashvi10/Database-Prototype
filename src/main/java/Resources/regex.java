@@ -15,6 +15,5 @@ public class regex {
 	public static final String DATABASE = "^use\s+[^;]*;$";
 	public static final String INSERT = "";
 	public static final String CREATEDB = "^create\sdatabase\s[^;]*;$";
-	public static final String DATABETWEENBRACKET = "\\((.*?)\\)";
 
 }

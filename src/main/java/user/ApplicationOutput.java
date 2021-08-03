@@ -39,8 +39,8 @@ public class ApplicationOutput {
 			if(sel == 1) {
 				 login login = new login();
 		         if(login.login()==true) {
-		        	 application application = new application();
-		        	 application.Application();
+		        	 Common common = Common.getInstance();
+		        	 common.takeinput();
 		         }
 			}
 			else if(sel == 2) {
