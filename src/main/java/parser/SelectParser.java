@@ -20,7 +20,8 @@ public class SelectParser {
 		String conditions = "";
 		Map<String, ArrayList<String>> mapping = new HashMap<String, ArrayList<String>>();
 
-		String[] splitQuery = query.replace(";", "").split("\\s");
+		String selectquery = query.replace(";", "");
+		String[] splitQuery = selectquery.trim().split("\\s");
 		for (int word = 1; word < splitQuery.length; word++) {
 			if (splitQuery[word].equalsIgnoreCase("FROM")) {
 				ArrayList<String> from = new ArrayList<>();
@@ -38,8 +39,8 @@ public class SelectParser {
 				colFields = splitQuery[word] + " " + colFields;
 			}
 		}
-		if (query.indexOf("where") != -1) {
-			String[] where = query.split("where");
+		if (selectquery.indexOf("where") != -1) {
+			String[] where = selectquery.split("where");
 			String[] whereClause = where[1].trim().split(" ");
 			ArrayList<String> Clause = new ArrayList<>();
 			for (String b : whereClause) {
