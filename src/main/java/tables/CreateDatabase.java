@@ -5,13 +5,21 @@
  */
 package tables;
 
+import logs.DatabaseRecord;
+import logs.EventFailRecord;
+import logs.ExistRecord;
+
 import java.io.File;
+import java.io.IOException;
 
 public class CreateDatabase {
 
   String store = "databases/";
+  DatabaseRecord databaseRecord = new DatabaseRecord();
+  EventFailRecord eventFailRecord = new EventFailRecord();
+  ExistRecord existRecord = new ExistRecord();
 
-  public void createDatabases(String query) {
+  public void createDatabases(String query) throws IOException {
     String[] splitQuery = query.toLowerCase().split(" ");
     System.out.println(splitQuery.length);
     if (splitQuery.length == 3) {
@@ -21,15 +29,26 @@ public class CreateDatabase {
     }
   }
 
-  private void checkDatabaseExists(String dbName) {
+  private void checkDatabaseExists(String dbName) throws IOException {
     System.out.println(dbName);
     store = store + dbName;
     File createFolder = new File(store);
+    long startTime = System.nanoTime();
     if (createFolder.exists()) {
       System.out.println("The schema already exists");
-    }else{
+      long endTime = System.nanoTime();
+      long timeElapsed = endTime - startTime;
+      existRecord.event(dbName, timeElapsed);
+    }else if(!createFolder.exists()){
       createFolder.mkdir();
       System.out.println("The schema has been created");
+      long endTime = System.nanoTime();
+      long timeElapsed = endTime - startTime;
+      databaseRecord.event(dbName,timeElapsed);
+    } else {
+      long endTime = System.nanoTime();
+      long timeElapsed = endTime - startTime;
+      eventFailRecord.event(dbName,timeElapsed);
     }
   }
 

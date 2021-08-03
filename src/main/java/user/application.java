@@ -18,6 +18,7 @@ public class application {
     System.out.println("Please Enter the query for parsing:");
     Scanner scanner = new Scanner(System.in);
     String query = scanner.nextLine();
+    logs.readTable.print(query);
     String[] queryToken = query.split(" ");
     System.out.println(queryToken[1].toLowerCase());
 
