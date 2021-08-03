@@ -1,10 +1,17 @@
 package logs;
 
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
+/**
+ * File: readTable.java
+ * @author Yashvi Lad
+ * Purpose: Query log printing
+ * Description: This class will write all query logs in one text file.
+ */
 public class readTable {
 
   private static FileWriter log = null;

@@ -41,12 +41,5 @@ public class queryValidity {
     return false;
 
   }
-//public static boolean validateDelete () {
-//
-//}
-public static boolean validateCreate(String query) {
-  return true;
-  
-}
   
 }

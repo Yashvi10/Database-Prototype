@@ -15,6 +15,7 @@ public class SelectParser {
 
   public static void parsingAttributes(String[] query1) {
     String[] splitQuery = query1;
+
     String Attributes = "";
     String conditions = "";
     String query= "";
@@ -55,5 +56,23 @@ public class SelectParser {
     }
     identifier obj = new identifier();
     obj.identifyTableSelect(mapping);
+//    
+//    if(splitQuery[0].compareToIgnoreCase("CREATE") == 0) {
+//      checkValidity valid = new checkValidity();
+//      if (valid.checkCreate(query) == true) {
+//        if (splitQuery[1].equalsIgnoreCase("Table")) {
+//          String store = "databases/Deeksha" ;
+//          File checkFolder = new File(store);
+//          if (!checkFolder.exists()) {
+//            System.out.println("The schema doesnt exist");
+//          } else {
+//            store = store + "/" + splitQuery[2] + ".txt";
+//        }
+//      }
+//        
+//        
+//    }
+ //   }
+    
   
 }}

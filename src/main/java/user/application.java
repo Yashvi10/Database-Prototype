@@ -35,6 +35,7 @@ public class application {
          }
     }
 
+
     String queryToken2[] = obj.takeinput();
     String query = "";
     switch (queryToken[0].toLowerCase()){
