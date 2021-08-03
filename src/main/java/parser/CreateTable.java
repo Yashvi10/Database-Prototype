@@ -1,170 +1,87 @@
 package parser;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.Arrays;
+import Resources.Database;
 
-public class CreateTable{
-    String query;
-    ArrayList<String> queryTokens = new ArrayList<String>();
-    String path = "databases";
-    String remotePath = "databases\\Deeksha\\";
-    String tablemetapath, tablepath;
-    String tableRemotePath, tableRemoteMetaPath;
-    String[] getDataInsideBracket;
-    boolean result;
+/**
+ * @author Deeksha Sareen
+ *
+ */
+public class CreateTable {
 
-    public CreateTable(String query) {
-        this.query = query;
-        tokenize();
-        tablemetapath = path + "\\" + queryTokens.get(2).toLowerCase() + "meta" + ".txt";
-        tablepath = path + "\\" + queryTokens.get(2).toLowerCase() + ".txt";
-        tableRemoteMetaPath = remotePath + "\\" + queryTokens.get(2).toLowerCase() + "meta" + ".txt";
-        tableRemotePath = remotePath + "\\" + queryTokens.get(2).toLowerCase() + ".txt"  ;
-    }
+	public void createTable(String query) {
+//CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));
+		String tablePath = Database.getDatabase() + "/" + getTable(query);
+		String tableMetaPath = Database.getDatabase() + "/meta_" + getTable(query);
+		boolean flag = false;
+		File file = new File(tablePath);
+		if (file.exists()) {
+			System.err.println("Table with name " + getTable(query) + " already exists");
+		} else {
+			try {
+				flag = file.createNewFile();
+				file = new File(tableMetaPath);
+				if(file.exists()) {
+				   System.err.println("Metadata file with name " + getTable(query) + " already exists");
+				}
+				else {
+					file.createNewFile();
+				}
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		String[] getToken = query.split("\\((?!\\d)");
+		String[] colList = getToken[1].split("\\);");
+		String[] tableCols = colList[0].split(",");
+		if (flag) {
+			System.out.println("Table successfully created.");
+			FileWriter fileWriter;
+			try {
+				fileWriter = new FileWriter(tableMetaPath);
+				for (int i = 0; i < tableCols.length; i++) {
+					fileWriter.write(tableCols[i].replaceAll(" ", "--") + "\n");
+				}
+				fileWriter.close();
+				FileWriter tablecolwriter = new FileWriter(tablePath);
+				String datatype;
+				String[] splitDataType = new String[tableCols.length];
+				for (int i = 0; i < tableCols.length; i++) {
+					splitDataType[i] = tableCols[i].split(" ")[1];
+					datatype = splitDataType[i];
+					// System.out.println("Th");
+					if (i == (tableCols.length - 1)) {
+						if (datatype.equalsIgnoreCase("int"))
+							tablecolwriter.write("|  Int  |");
+						else
+							tablecolwriter.write("|  String  |");
+					} else {
+						if (datatype.equalsIgnoreCase("int"))
+							tablecolwriter.write("|  Int  |");
+						else
+							tablecolwriter.write("|  String  |");
 
-    private void tokenize() {
-        String[] getPartBeforeRoundBracket = query.split("\\((.*?)\\);");
-        String[] getTableName = getPartBeforeRoundBracket[0].split(" ");
-        queryTokens.addAll(Arrays.asList(getTableName));
+					}
+					
+				}
+				tablecolwriter.write(System.lineSeparator());
+				tablecolwriter.write("-----------------------------------------------------------------------");
+				tablecolwriter.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
-        String[] getPartInsideRoundBracket = query.split("\\(");
-        String intermediateResult = getPartInsideRoundBracket[1];
-        String[] removeLastCurlyBracket = intermediateResult.split("\\)");
-        String[] getColumnTokens = removeLastCurlyBracket[0].split(",");
-        getDataInsideBracket = removeLastCurlyBracket[0].split(",");
-
-        for (String j : getColumnTokens) {
-            String[] abc = j.split(" ");
-            queryTokens.addAll(Arrays.asList(abc));
-            System.out.println(queryTokens);
-        }
-        
-    }
-
-    public String foreignKeyTableName() {
-        String foreignKeyTableName = null;
-
-        for(int i=0; i < getDataInsideBracket.length;i++)
-        {
-            String row = getDataInsideBracket[i];
-            if (row.toUpperCase().contains("FK")) {
-                String[] foreignKey = row.split(" ");
-                foreignKeyTableName = foreignKey[3].toLowerCase();
-            }
-        }
-        System.out.println(foreignKeyTableName);
-        return foreignKeyTableName;
-    }
-
-    public boolean checkIfForeignTableExists(String fTableName) {
-        return Files.exists(Paths.get(path + "/" + fTableName + ".txt"));
-    }
-
-    public void execute() {
-
-        File directory=new File(path);
-        int fileCount = 0;
-        if(directory.list() != null)
-        {
-            fileCount=directory.list().length;
-        }
-
-        System.out.println("File Count:"+fileCount);
-
-        if(fileCount<5)
-        {
-            tableCreationCheck();
-        }
-
-        if(fileCount>=5)
-        {
-            createTableOperation(remotePath,tableRemoteMetaPath,tableRemotePath);
-        }
-    }
-
-    public void tableCreationCheck()
-    {
-        String foreignTableName = foreignKeyTableName();
-        if(foreignTableName == null)
-        {
-            createTableOperation(path,tablemetapath,tablepath);
-        }
-
-        else
-        {
-            boolean checkForeignTable = checkIfForeignTableExists(foreignTableName);
-            if(checkForeignTable)
-            {
-                createTableOperation(path,tablemetapath,tablepath);
-            }
-            else
-            {
-                System.out.println("Foreign Table doesn't exist");
-            }
-        }
-    }
-
-    public void createTableOperation(String currentDBPath, String currentMetaPath, String currentFilePath)
-    {
-        File file = new File(currentMetaPath);
-        try {
-            result = file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            if (result) {
-                FileWriter myWriter = new FileWriter(currentMetaPath);
-                for (int i = 0; i < getDataInsideBracket.length; i++) {
-                    Integer a = i;
-                    String index = a.toString();
-                    myWriter.write(index);
-                    String[] abc = getDataInsideBracket[i].split(" ");
-                    for (String t : abc) {
-                        myWriter.write("-" + t);
-                    }
-                    myWriter.write("\n");
-                }
-                myWriter.close();
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-
-        File createFile = new File(currentFilePath);
-        try {
-            result = createFile.createNewFile();
-            if (result) {
-                System.out.println("table succesfully created");
-            } else {
-                System.out.println("table already exist");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String dumpFilePath = path + "/" + "SQLdump.txt";
-        String dumpRemoteFilePath = remotePath+ "/" + "SQLdump.txt";
-        Path path = Paths.get(dumpFilePath);
-        Path remotePath = Paths.get(dumpRemoteFilePath);
-
-        try {
-            Files.writeString(path, query + "\n", StandardCharsets.UTF_8, StandardOpenOption.APPEND);
-            Files.writeString(remotePath, query + "\n", StandardCharsets.UTF_8, StandardOpenOption.APPEND);
-        } catch (IOException ex) {
-            System.out.println("Error inserting create query in sql dump file");
-        }
-    }
+	private String getTable(String query) {
+		query = query.replaceAll(";", "");
+		query = query.replaceAll(",", " ");
+		query = query.replaceAll("[^a-zA-Z ]", " ");
+		String[] sqlWords = query.split(" ");
+		String name = sqlWords[2] + ".txt";
+		return name;
+	}
 }
