@@ -21,7 +21,7 @@ public class readTable {
     LocalDateTime localDateTime = LocalDateTime.now();
     if (fileOut) {
 
-      String path = "src/main/java/logs/log.txt";
+      String path = "LogAndDumpFiles/QueryLogs/queryLog.txt";
       File file = new File(path);
       try {
 
