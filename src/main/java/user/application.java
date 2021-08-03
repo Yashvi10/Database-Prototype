@@ -1,4 +1,5 @@
 package user;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -6,11 +7,14 @@ import Resources.Database;
 import Resources.regex;
 import parser.CreateTable;
 import parser.UpdateQueryValidity;
+import parser.createDatabase;
 import parser.selectExecutioner;
 import parser.syntaxValidation;
-import parser.SelectParser;
-import tables.CreateDatabase;
 
+/**
+ * @author Deeksha Sareen
+ *
+ */
 public class application {
 
 	syntaxValidation syntax = new syntaxValidation();
@@ -23,6 +27,17 @@ public class application {
 		logs.readTable.print(query);
 		String[] Token = query.split(" ");
 		String[] queryToken = null;
+		if (Token[1].toLowerCase().equals("database")) {
+			if (syntax.validateQuerySyntax(query, regex.CREATEDB)) {
+				createDatabase create = new createDatabase();
+				create.createDatabases(query);
+				Application();
+			} else {
+				System.err.println("Syntax Error");
+				System.err.println("The expected format is... CREATE DATABASE <DATABASENAME>;");
+			}
+
+		}
 		if (Token[0].toLowerCase().equals("use")) {
 			if (syntax.validateQuerySyntax(query, regex.DATABASE)) {
 				String dbName = Token[1].substring(0, Token[1].length() - 1);
@@ -41,8 +56,8 @@ public class application {
 				}
 
 			} else {
-				System.out.println("Syntax Error");
-				System.out.println("The expected format is... USE <DATABASENAME>;");
+				System.err.println("Syntax Error");
+				System.err.println("The expected format is... USE <DATABASENAME>;");
 			}
 		}
 		if (queryToken != null) {
@@ -53,8 +68,8 @@ public class application {
 					selectExecutioner exec = new selectExecutioner();
 					exec.executeSelect(query);
 				} else {
-					System.out.println("Syntax Error");
-					System.out.println(
+					System.err.println("Syntax Error");
+					System.err.println(
 							"The expected format is... SELECT * FROM <TABLENAME> or SELECT <COL1,COL2..COLN> FROM TABLENAME;");
 				}
 				break;
@@ -66,15 +81,16 @@ public class application {
 				break;
 
 			case "create":
-				if (queryToken[1].toLowerCase().equals("database")) {
-					System.out.println("in create");
-					CreateDatabase create = new CreateDatabase();
-					create.createDatabases(query);
-				}
+
 				if (queryToken[1].toLowerCase().equals("table")) {
-					System.out.println("in create");
-					CreateTable create = new CreateTable(query);
-					create.tableCreationCheck();
+					if (syntax.validateQuerySyntax(query.toLowerCase(), regex.CREATETABLE)) {
+						CreateTable create = new CreateTable();
+						create.createTable(query);
+					} else {
+						System.err.println("Syntax Error");
+						System.err.println(
+								"The expected format is... CREATE TABLE <TABLENAME>(COLUMN1 <INT|VARCHAR(digit)>, COLUMN2 <INT|VARCHAR(digit)>);");
+					}
 				}
 				break;
 
@@ -86,7 +102,7 @@ public class application {
 
 			}
 		} else {
-			System.out.println("No database selected");
+			System.err.println("No database selected");
 		}
 
 	}

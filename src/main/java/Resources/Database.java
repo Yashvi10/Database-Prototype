@@ -2,7 +2,7 @@ package Resources;
 
 /**
  * @author Deeksha Sareen
- *
+ *  Creates an instance of the database and sets its value.
  */
 public class Database {
 

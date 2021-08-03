@@ -1,6 +1,3 @@
-/**
- * 
- */
 package parser;
 
 import java.util.regex.Matcher;
@@ -8,7 +5,7 @@ import java.util.regex.Pattern;
 
 /**
  * @author DeekshaSareen
- *
+ * This class is responsible for validating the syntax of the queries using regex
  */
 public class syntaxValidation {
 
