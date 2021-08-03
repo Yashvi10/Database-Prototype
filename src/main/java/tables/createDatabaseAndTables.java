@@ -1,5 +1,10 @@
 package tables;
 
+import logs.DatabaseRecord;
+import logs.ExistRecord;
+import logs.NotExistRecord;
+import logs.TableRecord;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -7,6 +12,12 @@ import java.util.Scanner;
 public class createDatabaseAndTables {
 
   public void createDbOrTable() throws IOException {
+
+    DatabaseRecord databaseRecord = new DatabaseRecord();
+    ExistRecord existRecord = new ExistRecord();
+    NotExistRecord notExistRecord = new NotExistRecord();
+    TableRecord tableRecord = new TableRecord();
+
     while (true) {
       String store = "databases/";
       System.out.println("Please select a number from 1 to 3");
@@ -22,11 +33,18 @@ public class createDatabaseAndTables {
           String schemaName = scanner.next();
           store = store + schemaName;
           File createFolder = new File(store);
+          long startTime = System.nanoTime();
           if (!createFolder.exists()) {
             createFolder.mkdir();
             System.out.println("The folder is created");
+            long endTime = System.nanoTime();
+            long timeElapsed = endTime - startTime;
+            databaseRecord.event(schemaName,timeElapsed);
           } else {
             System.out.println("The schema already exists");
+            long endTime = System.nanoTime();
+            long timeElapsed = endTime - startTime;
+            existRecord.event(schemaName,timeElapsed);
           }
           break;
         case 2:
@@ -34,8 +52,12 @@ public class createDatabaseAndTables {
           String schema = scanner.next();
           store = "databases/" + schema;
           File checkFolder = new File(store);
+          long startTime1 = System.nanoTime();
           if (!checkFolder.exists()) {
             System.out.println("The schema doesnt exist");
+            long endTime = System.nanoTime();
+            long timeElapsed = endTime - startTime1;
+            notExistRecord.event(schema,timeElapsed);
           } else {
             System.out.println("Enter the name of table");
             String createTable = scanner.next();
@@ -44,9 +66,15 @@ public class createDatabaseAndTables {
             File tableFile = new File(store);
             if (tableFile.exists()) {
               System.out.println("The table already exists");
+              long endTime = System.nanoTime();
+              long timeElapsed = endTime - startTime1;
+              existRecord.event(createTable,timeElapsed);
             } else {
               tableFile.createNewFile();
               System.out.println("The table has been created");
+              long endTime = System.nanoTime();
+              long timeElapsed = endTime - startTime1;
+              tableRecord.event(createTable,timeElapsed);
             }
           }
           break;

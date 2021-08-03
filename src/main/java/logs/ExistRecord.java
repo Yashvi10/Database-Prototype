@@ -7,10 +7,10 @@ public class ExistRecord implements EventLogger{
 
   @Override
   public void event(String name, long timeELapsed) throws IOException {
-    System.out.println("Already exists!");
 
-    FileWriter fileWriter = new FileWriter("databases/Yashvi/" + name + ".txt", true);
-    fileWriter.write(name + "Already exists!" + " " + "Executed in " + timeELapsed / 1000000 + "ms");
+    FileWriter fileWriter = new FileWriter("databases/EventLogs/log.txt", true);
+    fileWriter.write(name + "\tAlready exists!" + " " + "Executed in " + timeELapsed / 1000000 + "ms" + "\n");
+    fileWriter.close();
   }
 
 }
