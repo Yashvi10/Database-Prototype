@@ -2,4 +2,5 @@ csci5408	Database Created Successfully!	Executed in 0ms
 csci5408	Already exists! Executed in 0ms
 table1	Table Created Successfully!	Executed in 3377ms
 table1	Already exists! Executed in 2727ms
-krina	Schema does not exist! Executed in 0m
+krina	Schema does not exist! Executed in 0ms
+

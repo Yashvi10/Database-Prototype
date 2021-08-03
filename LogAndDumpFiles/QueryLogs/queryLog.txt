@@ -1,6 +1,2 @@
-use vaishnavi; 2021-08-03T17:10:42.842708
-select * from vaishnavi where id = 1; 2021-08-03T17:13:06.451477200
-use vaishnavi; 2021-08-03T17:14:50.890452900
-select * from vaishnavi where id = 2; 2021-08-03T17:15:02.835865300
-use vaishnavi; 2021-08-03T17:15:34.463641300
-select * from ttt where id = 2; 2021-08-03T17:15:53.856544500
+yashvi@dal.ca	use vaishnavi;	2021-08-03T18:54:19.604666200
+yashvi@dal.ca	select * from ttt where id = 3;	2021-08-03T18:54:38.034406
