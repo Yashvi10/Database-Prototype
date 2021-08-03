@@ -202,15 +202,11 @@ public class login {
 
 				System.out.println("Enter password: ");
 				String password = input.nextLine();
-
-				file = new File("UserRegisteredDetails");
-
-				br = new BufferedReader(new FileReader(file));
-
 				String str2;
 				int count2 = 0;
 				while ((str2 = br.readLine()) != null) {
-					if (str.contains(password)) {
+					
+					if (str2.contains(password)) {
 						count2++;
 						System.out.println("Please answer a security question");
 						if (mfa() == true) {
