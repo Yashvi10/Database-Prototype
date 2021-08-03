@@ -11,12 +11,13 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class queryParser {
+public class SelectParser {
 
-  public static void parsingAttributes(String query) {
-    String[] splitQuery = query.split(" ");
+  public static void parsingAttributes(String[] query1) {
+    String[] splitQuery = query1;
     String Attributes = "";
     String conditions = "";
+    String query= "";
     Map<String, ArrayList<String>> mapping = new HashMap<String, ArrayList<String>>();
     if (splitQuery[0].compareToIgnoreCase("SELECT") == 0) {
       queryValidity valid = new queryValidity();
