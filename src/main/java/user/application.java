@@ -36,6 +36,7 @@ public class application {
 					db.setDatabaseName(store);
 					System.out.println("Enter Query for Processing");
 					query = input.nextLine();
+					logs.readTable.print(query);
 					queryToken = query.split(" ");
 				}
 
