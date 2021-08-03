@@ -1,13 +1,14 @@
-/**
- * @author Deeksha Sareen
- * This class is reponsible for parsing the SQL query
- */
+
 package parser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Deeksha Sareen
+ * This class is reponsible for parsing the SQL query
+ */
 public class SelectParser {
 
 	public static String selectFields;

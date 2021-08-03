@@ -8,9 +8,12 @@ import parser.CreateTable;
 import parser.UpdateQueryValidity;
 import parser.selectExecutioner;
 import parser.syntaxValidation;
-import parser.SelectParser;
 import tables.CreateDatabase;
 
+/**
+ * @author Deeksha Sareen
+ *
+ */
 public class application {
 
 	syntaxValidation syntax = new syntaxValidation();

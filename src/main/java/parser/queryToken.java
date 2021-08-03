@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author HP
+ * @author Deeksha Sareen
  *
  */
 public class queryToken {
