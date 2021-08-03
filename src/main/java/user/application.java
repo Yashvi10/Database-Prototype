@@ -1,16 +1,12 @@
-/**
- * 
- */
 package user;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-
 import Resources.Database;
 import Resources.regex;
 import parser.CreateTable;
 import parser.UpdateQueryValidity;
+import parser.selectExecutioner;
 import parser.syntaxValidation;
 import parser.SelectParser;
 import tables.CreateDatabase;
@@ -51,10 +47,9 @@ public class application {
 			switch (queryToken[0].toLowerCase()) {
 
 			case "select":
-
 				if (syntax.validateQuerySyntax(query, regex.SELECT)) {
-					SelectParser parser = new SelectParser();
-					parser.parsingAttributes(query);
+					selectExecutioner exec = new selectExecutioner();
+					exec.executeSelect(query);
 				} else {
 					System.out.println("Syntax Error");
 					System.out.println(
