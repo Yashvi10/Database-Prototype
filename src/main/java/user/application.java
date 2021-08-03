@@ -19,19 +19,17 @@ public class application {
 
 	syntaxValidation syntax = new syntaxValidation();
 
-	public void Application() throws IOException {
+	public void Application(String query) throws IOException {
 
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter Query for Processing");
-		String query = input.nextLine();
+		if (query.toLowerCase().equals("exit")) {
+			System.exit(0);
+		}
 		logs.readTable.print(query);
 		String[] Token = query.split(" ");
-		String[] queryToken = null;
+		
 		if (Token[1].toLowerCase().equals("database")) {
 			if (syntax.validateQuerySyntax(query, regex.CREATEDB)) {
 				createDatabase create = new createDatabase();
-				create.createDatabases(query);
-				Application();
 			} else {
 				System.err.println("Syntax Error");
 				System.err.println("The expected format is... CREATE DATABASE <DATABASENAME>;");
@@ -49,21 +47,17 @@ public class application {
 					Database.setDatabase(store);
 					Database db = Database.instance();
 					db.setDatabaseName(store);
-					System.out.println("Enter Query for Processing");
-					query = input.nextLine();
 					logs.readTable.print(query);
-					queryToken = query.split(" ");
 				}
 
 			} else {
 				System.err.println("Syntax Error");
 				System.err.println("The expected format is... USE <DATABASENAME>;");
 			}
-		}
-		if (queryToken != null) {
-			switch (queryToken[0].toLowerCase()) {
 
-			case "select":
+		}
+		if (Token[0].toLowerCase().equals("select")) {
+			if (Database.getDatabase() != null) {
 				if (syntax.validateQuerySyntax(query, regex.SELECT)) {
 					selectExecutioner exec = new selectExecutioner();
 					exec.executeSelect(query);
@@ -72,37 +66,43 @@ public class application {
 					System.err.println(
 							"The expected format is... SELECT * FROM <TABLENAME> or SELECT <COL1,COL2..COLN> FROM TABLENAME;");
 				}
-				break;
+			} else {
+				System.out.println("No database selected");
+			}
+		}
+		if (Token[0].toLowerCase().equals("create") && Token[1].toLowerCase().equals("table")) {
+			if (Database.getDatabase() != null) {
 
-			case "update":
+				if (syntax.validateQuerySyntax(query.toLowerCase(), regex.CREATETABLE)) {
+					CreateTable create = new CreateTable();
+					create.createTable(query);
+				} else {
+					System.err.println("Syntax Error");
+					System.err.println(
+							"The expected format is... CREATE TABLE <TABLENAME>(COLUMN1 <INT|VARCHAR(digit)>, COLUMN2 <INT|VARCHAR(digit)>);");
+				}
+
+			} else {
+				System.out.println("No database selected");
+			}
+		}
+		if (Token[0].toLowerCase().equals("update")) {
+			if (Database.getDatabase() != null) {
 				UpdateQueryValidity update = new UpdateQueryValidity();
 				update.updateQuery(query);
-
-				break;
-
-			case "create":
-
-				if (queryToken[1].toLowerCase().equals("table")) {
-					if (syntax.validateQuerySyntax(query.toLowerCase(), regex.CREATETABLE)) {
-						CreateTable create = new CreateTable();
-						create.createTable(query);
-					} else {
-						System.err.println("Syntax Error");
-						System.err.println(
-								"The expected format is... CREATE TABLE <TABLENAME>(COLUMN1 <INT|VARCHAR(digit)>, COLUMN2 <INT|VARCHAR(digit)>);");
-					}
-				}
-				break;
-
-			case "delete":
-//            deletequeryValidity delete = new deletequeryValidity();
-//            deletequeryParser dparser = new deletequeryParser();
-//            System.out.println("Delete query parser: "+dparser.parsingAttributes((query).toLowerCase()));
-//            break;
-
+			} else {
+				System.out.println("No database selected");
 			}
-		} else {
-			System.err.println("No database selected");
+		}
+		if (Token[0].toLowerCase().equals("delete")) {
+			if (Database.getDatabase() != null) {
+				// do stuff
+			} else {
+				System.out.println("No database selected");
+			}
+		}
+		if (query.toLowerCase().equals("exit")) {
+			System.exit(0);
 		}
 
 	}
