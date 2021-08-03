@@ -202,9 +202,6 @@ public class login {
 
 				System.out.println("Enter password: ");
 				String password = input.nextLine();
-
-				file = new File("UserRegisteredDetails");
-
 				String str2;
 				int count2 = 0;
 				while ((str2 = br.readLine()) != null) {
