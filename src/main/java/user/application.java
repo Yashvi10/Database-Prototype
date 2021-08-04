@@ -93,7 +93,8 @@ public class application {
 		}
 		if (Token[0].toLowerCase().equals("delete")) {
 			if (Database.getDatabase() != null) {
-				// do stuff
+				deleteValidate delete = new deleteValidate();
+				delete.deleteSyntax(query);
 			} else {
 				System.err.println("No database selected");
 			}
