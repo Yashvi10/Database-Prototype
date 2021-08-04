@@ -269,6 +269,54 @@ yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.355986500
 yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.374978600
 yashvi@dal.ca	create table products(product_id int,product_name varchar(100));	2021-08-04T17:01:41.262126700
 >>>>>>> 548b27f284543378cd634e4fcb5f532a48d97d96
+<<<<<<< HEAD
+deekshasareen@gmail.com	use test;	2021-08-04T18:48:25.030811
+deekshasareen@gmail.com	use test;	2021-08-04T18:48:25.114049900
+deekshasareen@gmail.com	use test;	2021-08-04T18:49:15.920366300
+deekshasareen@gmail.com	use test;	2021-08-04T18:49:15.922368600
+deekshasareen@gmail.com	generate erd;	2021-08-04T18:49:21.298549400
+deekshasareen@gmail.com	use test;	2021-08-04T18:50:01.022078900
+deekshasareen@gmail.com	use test;	2021-08-04T18:50:01.025080600
+deekshasareen@gmail.com	use test;	2021-08-04T18:51:15.271915100
+deekshasareen@gmail.com	use test;	2021-08-04T18:51:15.274918200
+deekshasareen@gmail.com	use test;	2021-08-04T18:52:04.077317100
+deekshasareen@gmail.com	use test;	2021-08-04T18:52:04.080318800
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (2,'Yashvi', 'lad');	2021-08-04T18:56:48.937178200
+deekshasareen@gmail.com	use test;	2021-08-04T18:56:54.462715100
+deekshasareen@gmail.com	use test;	2021-08-04T18:56:54.614822900
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (2,'Deeksha', 'Sareen');	2021-08-04T18:56:58.790869800
+deekshasareen@gmail.com	use test;	2021-08-04T19:04:08.307819400
+deekshasareen@gmail.com	use test;	2021-08-04T19:04:08.971088900
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T19:04:19.938766200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Yashvi', 'Lad');	2021-08-04T19:04:47.314677800
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Deeksha', 'Sareen');	2021-08-04T19:07:19.668760400
+deekshasareen@gmail.com	use test;	2021-08-04T19:07:23.675576
+deekshasareen@gmail.com	use test;	2021-08-04T19:07:24.185663800
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Yashvi', 'Lad');	2021-08-04T19:07:41.541207600
+deekshasareen@gmail.com	use test;	2021-08-04T19:13:00.310442700
+deekshasareen@gmail.com	use test;	2021-08-04T19:13:00.962245800
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Deeksha', 'Sareen');	2021-08-04T19:13:09.357708300
+deekshasareen@gmail.com	use test;	2021-08-04T19:14:15.483611500
+deekshasareen@gmail.com	use test;	2021-08-04T19:14:15.485612500
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Deeksha', 'Sareen');	2021-08-04T19:14:22.001761400
+deekshasareen@gmail.com	use Deeksha;	2021-08-04T19:19:24.387568600
+deekshasareen@gmail.com	use Deeksha;	2021-08-04T19:19:25.016846200
+deekshasareen@gmail.com	drop table customers;	2021-08-04T19:19:37.123348300
+deekshasareen@gmail.com	use test;	2021-08-04T19:59:06.780754400
+deekshasareen@gmail.com	use test;	2021-08-04T19:59:07.332064900
+deekshasareen@gmail.com	generate erd	2021-08-04T19:59:13.273339800
+deekshasareen@gmail.com	use test;	2021-08-04T20:02:25.528333100
+deekshasareen@gmail.com	use test;	2021-08-04T20:02:25.715216100
+deekshasareen@gmail.com	generate erd;	2021-08-04T20:02:28.913274
+deekshasareen@gmail.com	use test;	2021-08-04T20:08:52.832569700
+deekshasareen@gmail.com	use test;	2021-08-04T20:08:52.835573700
+deekshasareen@gmail.com	generate erd;	2021-08-04T20:08:56.408295600
+deekshasareen@gmail.com	use test;	2021-08-04T20:15:15.851002300
+deekshasareen@gmail.com	use test;	2021-08-04T20:15:15.854004
+deekshasareen@gmail.com	use test;	2021-08-04T20:16:00.932619100
+deekshasareen@gmail.com	use test;	2021-08-04T20:16:00.935601700
+deekshasareen@gmail.com	generate erd;	2021-08-04T20:16:05.034345800
+=======
 yashvi@dal.ca	create database db;	2021-08-04T18:25:58.646955800
 yashvi@dal.ca	use db;	2021-08-04T18:26:36.056313200
 yashvi@dal.ca	use db;	2021-08-04T18:26:36.061314400
@@ -310,3 +358,4 @@ yashvi@dal.ca	create database db2;	2021-08-04T21:28:57.584130900
 yashvi@dal.ca	use db2;	2021-08-04T21:29:00.813459400
 yashvi@dal.ca	use db2;	2021-08-04T21:29:00.817407
 yashvi@dal.ca	transaction;	2021-08-04T21:30:21.834829400
+>>>>>>> 95e2d8d00fcc89975d9465130301c13ee24412c6
