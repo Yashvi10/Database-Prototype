@@ -24,26 +24,33 @@ public class erdGenerator {
         String dbPath = Database.getDatabase();
 		String[] tablenames;
 		File directory = new File(dbPath);
-		String tablePath = "ERD/"+Database.getDatabase()+".txt";
+		String[] getdatabasename = Database.getDatabase().split("/");
+		
+		String tablePath = "ERD/"+getdatabasename[1]+".txt";
+		File erdFile = new File(tablePath);
+		if(erdFile.exists()) {
+			erdFile.delete();
+		}
+		erdFile.createNewFile();
 		File[] files = directory.listFiles();
-		FileWriter fw = new FileWriter(tablePath,true);
+		FileWriter fw = new FileWriter(erdFile,true);
 		for (File file : files) {
 			if(file.getName().startsWith("meta")) {
 				fileReader = new FileReader(Database.getDatabase()+"/"+file.getName());
-				//System.out.println(file.getName());
+				
 				String[] fileName = file.getName().split(".txt");
 				tablenames=fileName[0].split("_");
-				//System.out.println(tablenames[1]);
 				String line = "";
 				ArrayList<String>cols = new ArrayList<>();
 				BufferedReader bufferedReader = new BufferedReader(fileReader);
-				fw.write(tablenames[1]);
+				fw.write("Table_Name = "+tablenames[1]);
 				fw.write(System.lineSeparator());
 				while ((line = bufferedReader.readLine()) != null) {
 					fw.write(line);
 					fw.write(System.lineSeparator());
 				}
 				fw.write("-----------------------------------------------------------------");
+				fw.write(System.lineSeparator());
 				fw.flush();
 			}
 
