@@ -374,3 +374,23 @@ deekshasareen@gmail.com	use test;	2021-08-04T22:20:01.441145800
 deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T22:20:40.771721300
 deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T22:20:42.766801200
 deekshasareen@gmail.com	transaction;	2021-08-04T22:20:42.796823900
+deekshasareen@gmail.com	use test;	2021-08-04T22:43:36.509982400
+deekshasareen@gmail.com	use test;	2021-08-04T22:43:36.648638200
+deekshasareen@gmail.com	use test;	2021-08-04T22:47:15.323636300
+deekshasareen@gmail.com	use test;	2021-08-04T22:47:15.326639900
+deekshasareen@gmail.com	use test;	2021-08-04T22:56:37.021257
+deekshasareen@gmail.com	use test;	2021-08-04T22:56:37.024258700
+deekshasareen@gmail.com	use test;	2021-08-04T22:58:52.871627400
+deekshasareen@gmail.com	use test;	2021-08-04T22:58:52.873629800
+deekshasareen@gmail.com	use test;	2021-08-04T23:00:11.813176700
+deekshasareen@gmail.com	use test;	2021-08-04T23:00:11.817180
+deekshasareen@gmail.com	generate erd;	2021-08-04T23:00:16.718792800
+deekshasareen@gmail.com	use test;	2021-08-04T23:04:08.504579500
+deekshasareen@gmail.com	use test;	2021-08-04T23:04:08.611382400
+deekshasareen@gmail.com	generate erd;	2021-08-04T23:04:12.164643
+deekshasareen@gmail.com	use test;	2021-08-04T23:06:51.875782800
+deekshasareen@gmail.com	use test;	2021-08-04T23:06:51.937827700
+deekshasareen@gmail.com	generate erd;	2021-08-04T23:06:55.743924400
+deekshasareen@gmail.com	use test;	2021-08-04T23:09:42.680065100
+deekshasareen@gmail.com	use test;	2021-08-04T23:09:42.785722300
+deekshasareen@gmail.com	generate erd;	2021-08-04T23:09:48.572154600
