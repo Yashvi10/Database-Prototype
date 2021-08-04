@@ -1,6 +1,5 @@
 package Transactions;
 
-import logs.TransactionRecord;
 import parser.selectExecutioner;
 import user.application;
 import java.io.IOException;
@@ -36,7 +35,7 @@ public class Transaction {
 			}
 			System.out.println("Transaction committed");
 		}
-
+       
 	}
 
 }

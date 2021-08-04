@@ -394,3 +394,19 @@ deekshasareen@gmail.com	generate erd;	2021-08-04T23:06:55.743924400
 deekshasareen@gmail.com	use test;	2021-08-04T23:09:42.680065100
 deekshasareen@gmail.com	use test;	2021-08-04T23:09:42.785722300
 deekshasareen@gmail.com	generate erd;	2021-08-04T23:09:48.572154600
+deekshasareen@gmail.com	use test;	2021-08-04T23:17:29.167558800
+deekshasareen@gmail.com	use test;	2021-08-04T23:17:29.240353
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T23:18:29.024766700
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T23:18:31.485793600
+deekshasareen@gmail.com	transaction;	2021-08-04T23:18:31.592902200
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T23:18:59.331382100
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T23:19:02.837607500
+deekshasareen@gmail.com	transaction;	2021-08-04T23:19:02.842611500
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T23:19:50.865351600
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T23:19:50.876359
+deekshasareen@gmail.com	transaction;	2021-08-04T23:19:50.882363700
+deekshasareen@gmail.com	CREATE TABLE yashvi(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T23:20:44.075007
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (5,'Deeksha2', 'Sareen2');	2021-08-04T23:20:46.823581200
+deekshasareen@gmail.com	transaction;	2021-08-04T23:20:46.829586
+deekshasareen@gmail.com	exit;	2021-08-04T23:20:57.292915700
+deekshasareen@gmail.com	exit;	2021-08-04T23:21:01.736507900
