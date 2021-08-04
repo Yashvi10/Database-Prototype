@@ -4,11 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import Resources.Database;
 import Resources.regex;
-import parser.CreateTable;
-import parser.UpdateQueryValidity;
-import parser.createDatabase;
-import parser.selectExecutioner;
-import parser.syntaxValidation;
+import parser.*;
 
 /**
  * @author Deeksha Sareen: This class is responsible for executing the queries
@@ -89,8 +85,8 @@ public class application {
 		}
 		if (Token[0].toLowerCase().equals("update")) {
 			if (Database.getDatabase() != null) {
-				UpdateQueryValidity update = new UpdateQueryValidity();
-				update.updateQuery(query);
+				updateValidate up = new updateValidate();
+				up.update(query);
 			} else {
 				System.err.println("No database selected");
 			}
