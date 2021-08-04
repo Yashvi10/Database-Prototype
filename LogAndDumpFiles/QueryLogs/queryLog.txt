@@ -10,7 +10,6 @@ deekshasareen@gmail.com	exit	2021-08-04T00:46:50.914718
 deekshasareen@gmail.com	create database skdnvn;	2021-08-04T00:47:52.109513800
 deekshasareen@gmail.com	exit	2021-08-04T00:48:12.904557900
 deekshasareen@gmail.com	create database deekshad;	2021-08-04T00:48:56.932187200
-<<<<<<< HEAD
 deekshasareen@gmail.com	use test;	2021-08-04T12:09:40.961229200
 deekshasareen@gmail.com	use test;	2021-08-04T12:09:41.022486100
 deekshasareen@gmail.com	insert into student (id, name ,last_name) values(1,'Deeksha', 'Sareen');	2021-08-04T12:09:53.503007500
@@ -316,7 +315,6 @@ deekshasareen@gmail.com	use test;	2021-08-04T20:15:15.854004
 deekshasareen@gmail.com	use test;	2021-08-04T20:16:00.932619100
 deekshasareen@gmail.com	use test;	2021-08-04T20:16:00.935601700
 deekshasareen@gmail.com	generate erd;	2021-08-04T20:16:05.034345800
-=======
 yashvi@dal.ca	create database db;	2021-08-04T18:25:58.646955800
 yashvi@dal.ca	use db;	2021-08-04T18:26:36.056313200
 yashvi@dal.ca	use db;	2021-08-04T18:26:36.061314400
@@ -358,7 +356,6 @@ yashvi@dal.ca	create database db2;	2021-08-04T21:28:57.584130900
 yashvi@dal.ca	use db2;	2021-08-04T21:29:00.813459400
 yashvi@dal.ca	use db2;	2021-08-04T21:29:00.817407
 yashvi@dal.ca	transaction;	2021-08-04T21:30:21.834829400
->>>>>>> 95e2d8d00fcc89975d9465130301c13ee24412c6
 deekshasareen@gmail.com	use test;	2021-08-04T22:08:41.956987300
 deekshasareen@gmail.com	use test;	2021-08-04T22:08:42.029419500
 deekshasareen@gmail.com	transaction;	2021-08-04T22:10:10.112605300
@@ -410,3 +407,12 @@ deekshasareen@gmail.com	insert into student (id, name ,last_name) values (5,'Dee
 deekshasareen@gmail.com	transaction;	2021-08-04T23:20:46.829586
 deekshasareen@gmail.com	exit;	2021-08-04T23:20:57.292915700
 deekshasareen@gmail.com	exit;	2021-08-04T23:21:01.736507900
+yashvi@dal.ca	use yashvi;	2021-08-04T23:20:15.083490300
+yashvi@dal.ca	use yashvi;	2021-08-04T23:20:15.119015800
+yashvi@dal.ca	select * from products;	2021-08-04T23:20:55.973181500
+yashvi@dal.ca	select * from books;	2021-08-04T23:20:55.988176500
+yashvi@dal.ca	use yashvi;	2021-08-04T23:22:31.890331
+yashvi@dal.ca	use yashvi;	2021-08-04T23:22:31.913532400
+yashvi@dal.ca	select * from books;	2021-08-04T23:22:57.832639500
+yashvi@dal.ca	select * from products;	2021-08-04T23:22:57.850143100
+yashvi@dal.ca	transaction;	2021-08-04T23:22:57.860140800

@@ -35,7 +35,12 @@ public class Transaction {
 			}
 			System.out.println("Transaction committed");
 		}
+<<<<<<< HEAD
        
+=======
+		TransactionRecord transactionRecord = new TransactionRecord();
+		transactionRecord.transactionLog(list);
+>>>>>>> 9a9610b3aa64b30f4789e95cdd121cf0ce9fd7ac
 	}
 
 }
