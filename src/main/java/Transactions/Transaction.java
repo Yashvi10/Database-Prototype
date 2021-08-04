@@ -1,8 +1,6 @@
 package Transactions;
 
-import parser.selectExecutioner;
 import user.application;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +12,10 @@ public class Transaction {
 
     Scanner scanner = new Scanner(System.in);
     List<String> list = new ArrayList<>();
-    System.out.println("Start Transaction");
+    System.out.println("Start Transaction:");
     while(true){
-      String str=scanner.next();
-      if(str.equals("commit")) {
+      String str=scanner.nextLine();
+      if(str.equals("commit;")|| str.equals("commit")) {
         break;
       }
       list.add(str);
@@ -26,8 +24,8 @@ public class Transaction {
     System.out.println(list);
     for(int i = 0;i<list.size();i++) {
       application app = new application();
-      String[] value = list.get(i).split(" ");
-//      app.Application();
+      System.out.println(list.get(i));
+      app.Application(list.get(i));
     }
   }
 
