@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen : This class is responsible for taking in the inputs from the user.
  *
  */
 public class SwitchCase {
@@ -25,12 +25,12 @@ public class SwitchCase {
 			if (scanner.hasNextInt()) {
 				selected = scanner.nextInt();
 			} else {
-				System.out.println("INVALID_SELECTION");
+				System.err.println("INVALID_SELECTION");
 
 				selected = printSelection(selectionOptions);
 			}
 		} else {
-			System.out.println("INVALID_DISPLAY");
+			System.err.println("INVALID_DISPLAY");
 		}
 		return selected;
 	}

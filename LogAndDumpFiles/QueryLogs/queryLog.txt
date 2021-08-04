@@ -10,6 +10,167 @@ deekshasareen@gmail.com	exit	2021-08-04T00:46:50.914718
 deekshasareen@gmail.com	create database skdnvn;	2021-08-04T00:47:52.109513800
 deekshasareen@gmail.com	exit	2021-08-04T00:48:12.904557900
 deekshasareen@gmail.com	create database deekshad;	2021-08-04T00:48:56.932187200
+<<<<<<< HEAD
+deekshasareen@gmail.com	use test;	2021-08-04T12:09:40.961229200
+deekshasareen@gmail.com	use test;	2021-08-04T12:09:41.022486100
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values(1,'Deeksha', 'Sareen');	2021-08-04T12:09:53.503007500
+deekshasareen@gmail.com	insert into student values(1,'Deeksha', 'Sareen');	2021-08-04T12:10:19.817070100
+deekshasareen@gmail.com	insert into student values(1,'Deeksha','Sareen');	2021-08-04T12:10:52.793993600
+deekshasareen@gmail.com	INSERT INTO student VALUES(1,'Deeksha','Sareen');	2021-08-04T12:11:32.862769600
+deekshasareen@gmail.com	use test;	2021-08-04T12:13:37.784559
+deekshasareen@gmail.com	use test;	2021-08-04T12:13:37.787248100
+deekshasareen@gmail.com	insert into student(id, name ,last_name) values (1,Deeksha,Sareen);	2021-08-04T12:14:40.866942800
+deekshasareen@gmail.com	insert into student values(1,'Deeksha','Sareen');	2021-08-04T12:15:06.269566100
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T12:16:11.170200500
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T12:16:18.720424
+deekshasareen@gmail.com	insert into student (id,name,last_name) values (1,'Deeksha','Sareen');	2021-08-04T12:16:42.402198
+deekshasareen@gmail.com	use test;	2021-08-04T12:36:10.473603900
+deekshasareen@gmail.com	use test;	2021-08-04T12:36:10.592382700
+deekshasareen@gmail.com	insert into student (id,name,l_name) values (1,'Deeksha','Sareen');	2021-08-04T12:36:26.706185
+deekshasareen@gmail.com	use test;	2021-08-04T12:39:19.223197500
+deekshasareen@gmail.com	use test;	2021-08-04T12:39:19.226199200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values(1,'Deeksha', 'Sareen');	2021-08-04T12:39:32.551017200
+deekshasareen@gmail.com	insert into student (id,name,l_name) values (1,'Deeksha','Sareen');	2021-08-04T12:39:45.447147800
+deekshasareen@gmail.com	use test;	2021-08-04T12:42:07.646451700
+deekshasareen@gmail.com	use test;	2021-08-04T12:42:07.649445900
+deekshasareen@gmail.com	insert into student (id,name,last_name) values (1,'Deeksha','Sareen');	2021-08-04T12:42:27.861052800
+deekshasareen@gmail.com	use test;	2021-08-04T12:47:26.889391200
+deekshasareen@gmail.com	use test;	2021-08-04T12:47:26.951590100
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T12:47:39.295145
+deekshasareen@gmail.com	use test;	2021-08-04T12:53:11.020994100
+deekshasareen@gmail.com	use test;	2021-08-04T12:53:11.160635200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T12:53:22.085644500
+deekshasareen@gmail.com	use test;	2021-08-04T13:24:29.870400100
+deekshasareen@gmail.com	use test;	2021-08-04T13:24:29.920623100
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T13:24:43.923517500
+deekshasareen@gmail.com	use test;	2021-08-04T13:33:26.082982400
+deekshasareen@gmail.com	use test;	2021-08-04T13:33:26.085984600
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T13:33:34.599358600
+deekshasareen@gmail.com	use test;	2021-08-04T14:00:53.998175900
+deekshasareen@gmail.com	use test;	2021-08-04T14:00:54.215328400
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:01:07.875311200
+deekshasareen@gmail.com	use test;	2021-08-04T14:07:02.490604600
+deekshasareen@gmail.com	use test;	2021-08-04T14:07:02.491584300
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:07:05.816143400
+deekshasareen@gmail.com	use test;	2021-08-04T14:07:48.388141800
+deekshasareen@gmail.com	use test;	2021-08-04T14:07:48.390145500
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:07:50.023599500
+deekshasareen@gmail.com	use test;	2021-08-04T14:09:27.700899500
+deekshasareen@gmail.com	use test;	2021-08-04T14:09:27.702900900
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:09:44.868122
+deekshasareen@gmail.com	use test;	2021-08-04T14:10:43.324374400
+deekshasareen@gmail.com	use test;	2021-08-04T14:10:43.327377500
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:10:45.768303
+deekshasareen@gmail.com	use test;	2021-08-04T14:12:43.406106500
+deekshasareen@gmail.com	use test;	2021-08-04T14:12:43.408108300
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:12:44.826997700
+deekshasareen@gmail.com	use test;	2021-08-04T14:14:16.434663300
+deekshasareen@gmail.com	use test;	2021-08-04T14:14:16.436665600
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:14:18.470808200
+deekshasareen@gmail.com	use test;	2021-08-04T14:15:47.446623300
+deekshasareen@gmail.com	use test;	2021-08-04T14:15:47.448624700
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:15:48.794502400
+deekshasareen@gmail.com	use test;	2021-08-04T14:16:15.712035600
+deekshasareen@gmail.com	use test;	2021-08-04T14:16:15.714038400
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:16:16.817241100
+deekshasareen@gmail.com	use test;	2021-08-04T14:17:11.283559500
+deekshasareen@gmail.com	use test;	2021-08-04T14:17:11.286581700
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:17:20.826301200
+deekshasareen@gmail.com	use test;	2021-08-04T14:19:07.307045100
+deekshasareen@gmail.com	use test;	2021-08-04T14:19:07.360601
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:19:09.873250100
+deekshasareen@gmail.com	use test;	2021-08-04T14:19:55.449833500
+deekshasareen@gmail.com	use test;	2021-08-04T14:19:55.452835600
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:19:56.484530800
+deekshasareen@gmail.com	use test;	2021-08-04T14:20:49.745635600
+deekshasareen@gmail.com	use test;	2021-08-04T14:20:49.851813400
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:20:51.207384300
+deekshasareen@gmail.com	use test;	2021-08-04T14:21:37.560682200
+deekshasareen@gmail.com	use test;	2021-08-04T14:21:37.624095400
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:21:39.564060800
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T14:22:13.243570700
+deekshasareen@gmail.com	use test;	2021-08-04T14:51:27.654762300
+deekshasareen@gmail.com	use test;	2021-08-04T14:51:27.738821900
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T14:51:44.861038100
+deekshasareen@gmail.com	use test;	2021-08-04T14:52:32.363483700
+deekshasareen@gmail.com	use test;	2021-08-04T14:52:32.418523100
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T14:52:36.808626100
+deekshasareen@gmail.com	use test;	2021-08-04T15:23:30.705732700
+deekshasareen@gmail.com	use test;	2021-08-04T15:23:32.568050900
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T15:23:37.876198900
+deekshasareen@gmail.com	use test;	2021-08-04T15:28:15.280027300
+deekshasareen@gmail.com	use test;	2021-08-04T15:28:15.342079600
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T15:28:23.564225900
+deekshasareen@gmail.com	use test;	2021-08-04T15:36:15.482100500
+deekshasareen@gmail.com	use test;	2021-08-04T15:36:16.679693200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T15:36:41.678756400
+deekshasareen@gmail.com	use test;	2021-08-04T16:45:03.009751900
+deekshasareen@gmail.com	use test;	2021-08-04T16:45:03.227242600
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T16:45:08.574575
+deekshasareen@gmail.com	use test;	2021-08-04T16:52:52.105975800
+deekshasareen@gmail.com	use test;	2021-08-04T16:52:52.109979600
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T16:52:55.736204200
+deekshasareen@gmail.com	use test;	2021-08-04T17:07:22.081823500
+deekshasareen@gmail.com	use test;	2021-08-04T17:07:22.083821200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:07:34.015059100
+deekshasareen@gmail.com	use test;	2021-08-04T17:12:28.099433100
+deekshasareen@gmail.com	use test;	2021-08-04T17:12:28.102433400
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:12:43.056942400
+deekshasareen@gmail.com	use test;	2021-08-04T17:14:30.570257700
+deekshasareen@gmail.com	use test;	2021-08-04T17:14:30.572258600
+deekshasareen@gmail.com	CREATE TABLE test(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100));	2021-08-04T17:15:02.523697
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:16:18.610983
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:16:30.056744600
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:18:36.892938100
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:18:43.140255500
+deekshasareen@gmail.com	use test;	2021-08-04T17:19:50.321578900
+deekshasareen@gmail.com	use test;	2021-08-04T17:19:50.323577
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:19:59.251360800
+deekshasareen@gmail.com	use test;	2021-08-04T17:22:19.390860200
+deekshasareen@gmail.com	use test;	2021-08-04T17:22:19.392859200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:22:23.600642800
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha','Sareen');	2021-08-04T17:22:36.731478200
+deekshasareen@gmail.com	use test;	2021-08-04T17:28:08.941080800
+deekshasareen@gmail.com	use test;	2021-08-04T17:28:09.035482900
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:28:11.196638100
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:28:18.815883500
+deekshasareen@gmail.com	use test;	2021-08-04T17:31:06.089618700
+deekshasareen@gmail.com	use test;	2021-08-04T17:31:06.273240700
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:31:22.622994800
+deekshasareen@gmail.com	use test;	2021-08-04T17:34:24.994471100
+deekshasareen@gmail.com	use test;	2021-08-04T17:34:25.488521400
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:34:39.521920400
+deekshasareen@gmail.com	use test;	2021-08-04T17:36:34.853330500
+deekshasareen@gmail.com	use test;	2021-08-04T17:36:34.981011700
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:36:44.936680
+deekshasareen@gmail.com	use test;	2021-08-04T17:40:00.125077400
+deekshasareen@gmail.com	use test;	2021-08-04T17:40:00.198130100
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:40:14.302005100
+deekshasareen@gmail.com	use test;	2021-08-04T17:40:42.421193500
+deekshasareen@gmail.com	use test;	2021-08-04T17:40:42.423174400
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T17:40:49.882088400
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Emanuela', 'Lopez');	2021-08-04T17:41:33.369552700
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Dedf', 'Sadvd');	2021-08-04T17:41:52.429252800
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (2,'Dddge', 'fegf');	2021-08-04T17:42:36.646535500
+deekshasareen@gmail.com	use test;	2021-08-04T17:46:04.752750100
+deekshasareen@gmail.com	use test;	2021-08-04T17:46:04.755752300
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Sofia', 'Saolan');	2021-08-04T17:46:29.320957
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (2,'Sofia', 'Saolan');	2021-08-04T17:46:40.886305400
+deekshasareen@gmail.com	use test;	2021-08-04T17:47:34.290172500
+deekshasareen@gmail.com	use test;	2021-08-04T17:47:34.293174600
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Sofia', 'Saolan');	2021-08-04T17:47:39.094869
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (2,'Sofia', 'Saolan');	2021-08-04T17:47:46.588269900
+deekshasareen@gmail.com	use test;	2021-08-04T17:48:49.289054200
+deekshasareen@gmail.com	use test;	2021-08-04T17:48:49.292056800
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (2,'Sofia', 'Saolan');	2021-08-04T17:48:55.471453400
+deekshasareen@gmail.com	use test;	2021-08-04T17:50:25.394171100
+deekshasareen@gmail.com	use test;	2021-08-04T17:50:25.396174800
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (1,'Sofia', 'Saolan');	2021-08-04T17:50:30.027988100
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (2,'Sofia', 'Saolan');	2021-08-04T17:50:36.399988700
+deekshasareen@gmail.com	use test;	2021-08-04T17:52:18.504181400
+deekshasareen@gmail.com	use test;	2021-08-04T17:52:18.507183100
+deekshasareen@gmail.com	insert into test (id, name ,last_name) values (3,'testfname', 'testlname');	2021-08-04T17:52:43.220587900
+=======
 yashvi@dal.ca	use yashvi;	2021-08-04T11:52:40.479482900
 yashvi@dal.ca	use yashvi;	2021-08-04T11:52:40.496480400
 yashvi@dal.ca	select * from firsttable;	2021-08-04T11:52:56.459789800
@@ -107,3 +268,4 @@ v@dal.ca	create table orders(order_id int,order_name varchar(100));	2021-08-04T1
 yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.355986500
 yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.374978600
 yashvi@dal.ca	create table products(product_id int,product_name varchar(100));	2021-08-04T17:01:41.262126700
+>>>>>>> 548b27f284543378cd634e4fcb5f532a48d97d96

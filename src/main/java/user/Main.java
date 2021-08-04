@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen : The main file for running the application
  *
  */
 public class Main {

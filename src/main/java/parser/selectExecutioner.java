@@ -12,7 +12,7 @@ import java.util.Map;
 import Resources.Database;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen : This class is responsible for executing the select query.
  *
  */
 public class selectExecutioner {

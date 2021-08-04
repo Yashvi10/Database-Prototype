@@ -9,35 +9,36 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * @author Deeksha Sareen: This class creates an instance of the prompt.
- * prompt recurs until the user enters exit.
+ * @author Deeksha Sareen: This class creates an instance of the prompt. prompt
+ *         recurs until the user enters exit.
  *
  */
 public class Common {
 
-	private Common() {}
-	
+	private Common() {
+	}
+
 	private static Common common;
-	
+
 	public static Common getInstance() {
-		if(common == null)
+		if (common == null)
 			common = new Common();
 		return common;
 	}
-	
+
 	public void takeinput() throws IOException {
-		
-		    System.out.println("Enter query ~");
-		    Scanner scanner = new Scanner(System.in);
-		    String query = scanner.nextLine();
-			String[] split = query.split(" ");
-			if(split[0].equals("create") && split[1].equals("database")) {
-				SQLDumpGenerator.dump(query);
-			} else if(split[0].equals("create") && split[1].equals("table")) {
-				SQLDumpGeneratorTable.dump(query);
-			}
-		    application obj = new application();
-		    obj.Application(query);
-		    takeinput();
+
+		System.out.println("Enter query ~");
+		Scanner scanner = new Scanner(System.in);
+		String query = scanner.nextLine();
+		String[] split = query.split(" ");
+		if (split[0].equals("create") && split[1].equals("database")) {
+			SQLDumpGenerator.dump(query);
+		} else if (split[0].equals("create") && split[1].equals("table")) {
+			SQLDumpGeneratorTable.dump(query);
+		}
+		application obj = new application();
+		obj.Application(query);
+		takeinput();
 	}
 }

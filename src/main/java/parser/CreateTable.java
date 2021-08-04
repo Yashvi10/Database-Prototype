@@ -8,13 +8,14 @@ import logs.ExistRecord;
 import logs.TableRecord;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen : This class creates a new table and a corresponding meta data file
  *
  */
 public class CreateTable {
 
 	public void createTable(String query) throws IOException {
 //CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));
+		String tableName = getTable(query);
 		String tablePath = Database.getDatabase() + "/" + getTable(query);
 		String tableMetaPath = Database.getDatabase() + "/meta_" + getTable(query);
 		boolean flag = false;
@@ -45,9 +46,9 @@ public class CreateTable {
 				e.printStackTrace();
 			}
 		}
-		String[] getToken = query.split("\\((?!\\d)");
-		String[] colList = getToken[1].split("\\);");
-		String[] tableCols = colList[0].split(",");
+		String[] getToken = query.split("\\);");
+		String[] colList = getToken[0].split(tableName.replace(".txt", "")+"\\(");
+		String[] tableCols = colList[1].split(",");
 		if (flag) {
 			System.out.println("Table successfully created.");
 			long endTime = System.nanoTime();
@@ -60,30 +61,7 @@ public class CreateTable {
 					fileWriter.write(tableCols[i].replaceAll(" ", "--") + "\n");
 				}
 				fileWriter.close();
-				FileWriter tablecolwriter = new FileWriter(tablePath);
-				String datatype;
-				String[] splitDataType = new String[tableCols.length];
-				for (int i = 0; i < tableCols.length; i++) {
-					splitDataType[i] = tableCols[i].split(" ")[1];
-					datatype = splitDataType[i];
-					// System.out.println("Th");
-					if (i == (tableCols.length - 1)) {
-						if (datatype.equalsIgnoreCase("int"))
-							tablecolwriter.write("|  Int  |");
-						else
-							tablecolwriter.write("|  String  |");
-					} else {
-						if (datatype.equalsIgnoreCase("int"))
-							tablecolwriter.write("|  Int  |");
-						else
-							tablecolwriter.write("|  String  |");
-
-					}
-					
-				}
-				tablecolwriter.write(System.lineSeparator());
-				tablecolwriter.write("-----------------------------------------------------------------------");
-				tablecolwriter.close();
+			
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
