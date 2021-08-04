@@ -85,7 +85,7 @@ public class application {
 				} else {
 					System.err.println("Syntax Error");
 					System.err.println(
-							"The expected format is... SELECT * FROM <TABLENAME> or SELECT <COL1,COL2..COLN> FROM TABLENAME;");
+							"The expected format is... SELECT * FROM <TABLENAME> FROM TABLENAME;");
 				}
 			} else {
 				System.err.println("No database selected");

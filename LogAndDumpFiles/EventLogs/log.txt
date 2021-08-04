@@ -48,3 +48,11 @@ v@dal.ca	Table deleted successfully	Executed in 13372ms
 yashvi@dal.ca	db2	Database Created Successfully!	Executed in 0ms
 deekshasareen@gmail.com	Table already exists! Executed in 190ms
 deekshasareen@gmail.com	Row insertion successfull	Executed in 24ms
+deekshasareen@gmail.com	Table already exists! Executed in 30ms
+deekshasareen@gmail.com	Row insertion successfull	Executed in 65ms
+deekshasareen@gmail.com	Table already exists! Executed in 1ms
+deekshasareen@gmail.com	Row insertion successfull	Executed in 1ms
+deekshasareen@gmail.com	Table already exists! Executed in 2ms
+deekshasareen@gmail.com	Row insertion successfull	Executed in 2ms
+deekshasareen@gmail.com	Table already exists! Executed in 2728ms
+deekshasareen@gmail.com	Row insertion successfull	Executed in 2ms
