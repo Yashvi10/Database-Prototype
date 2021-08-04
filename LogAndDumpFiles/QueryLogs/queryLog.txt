@@ -1,0 +1,19 @@
+yashvi@dal.ca	use vaishnavi;	2021-08-03T18:54:19.604666200
+yashvi@dal.ca	select * from ttt where id = 3;	2021-08-03T18:54:38.034406
+deekshasareen@gmail.com	create database solan;	2021-08-04T00:40:35.449994300
+deekshasareen@gmail.com	create database solan;	2021-08-04T00:44:02.411182600
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T00:46:08.150898900
+deekshasareen@gmail.com	use test;	2021-08-04T00:46:13.590335700
+deekshasareen@gmail.com	use test;	2021-08-04T00:46:13.592340400
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T00:46:16.892049700
+deekshasareen@gmail.com	exit	2021-08-04T00:46:50.914718
+deekshasareen@gmail.com	create database skdnvn;	2021-08-04T00:47:52.109513800
+deekshasareen@gmail.com	exit	2021-08-04T00:48:12.904557900
+deekshasareen@gmail.com	create database deekshad;	2021-08-04T00:48:56.932187200
+yashvi@dal.ca	use yashvi;	2021-08-04T11:52:40.479482900
+yashvi@dal.ca	use yashvi;	2021-08-04T11:52:40.496480400
+yashvi@dal.ca	select * from firsttable;	2021-08-04T11:52:56.459789800
+yashvi@dal.ca	use yashvi;	2021-08-04T11:56:12.492591400
+yashvi@dal.ca	use yashvi;	2021-08-04T11:56:12.513592200
+yashvi@dal.ca	create database csci5308;	2021-08-04T11:56:28.903192200
+yashvi@dal.ca	create table students;	2021-08-04T11:56:56.947915700

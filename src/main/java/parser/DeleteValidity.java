@@ -1,5 +1,7 @@
 package parser;
 
+import logs.ExistRecord;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
