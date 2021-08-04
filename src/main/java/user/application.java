@@ -3,9 +3,9 @@ package user;
 import java.io.File;
 import java.io.IOException;
 
-import ERD.erdGenerator;
 import Resources.Database;
 import Resources.regex;
+import erd.erdGenerator;
 import parser.CreateTable;
 import parser.createDatabase;
 import parser.insertParser;
