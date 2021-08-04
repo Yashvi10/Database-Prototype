@@ -2,6 +2,8 @@ package user;
 
 import java.io.File;
 import java.io.IOException;
+
+import ERD.erdGenerator;
 import Resources.Database;
 import Resources.regex;
 import parser.CreateTable;
@@ -25,6 +27,10 @@ public class application {
 
 		if (query.toLowerCase().equals("exit")) {
 			System.exit(0);
+		}
+		if(query.toLowerCase().equals("generate erd;")) {
+			erdGenerator erd = new erdGenerator();
+			erd.ERD();
 		}
 		logs.readTable.print(query);
 		String[] Token = query.split(" ");

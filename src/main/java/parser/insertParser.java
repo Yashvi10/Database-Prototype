@@ -38,6 +38,7 @@ public class insertParser {
 		String metaTablePath = Database.getDatabase() + "/meta_" + getTable(query);
 		String[] entries = values.trim().split(",");
 		String[] columns = colNames.trim().split(",");
+		int fileExists = 1;
 		int size = 0;
 		if (entries.length != columns.length) {
 			System.err.println("Column names don't match the column values");
@@ -60,7 +61,11 @@ public class insertParser {
 						String refPath = Database.getDatabase() + "/" + refTableName[0] + ".txt";
 						File file = new File(refPath);
 						if (!file.exists()) {
-							System.err.println("Table does not exist");
+							if(fileExists==1) {
+								System.err.println("Reference table does not exist");
+							}
+							
+							fileExists=0;
 						} else if (checkPrimaryConstraint(refPath, columns[i].trim()) == false && file.exists()) {
 							output += columns[i] + "=" + entries[i] + ", ";
 							size++;
@@ -79,7 +84,7 @@ public class insertParser {
 
 				}
 				FileWriter fileWriter = null;
-				if (size == columns.length) {
+				if (size == columns.length && fileExists==1) {
 					fileWriter = new FileWriter(tablePath, true);
 					fileWriter.write(System.lineSeparator());
 					fileWriter.write(output);
