@@ -45,3 +45,4 @@ d@dal.ca		Table Created Successfully!	Executed in 17ms
 d@dal.ca		Table Created Successfully!	Executed in 2ms
 v@dal.ca		Table Created Successfully!	Executed in 17ms
 v@dal.ca	Table deleted successfully	Executed in 13372ms
+yashvi@dal.ca	db2	Database Created Successfully!	Executed in 0ms

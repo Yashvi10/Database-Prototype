@@ -305,3 +305,8 @@ v@dal.ca	create table shops(shop_id int,shop_name varchar(100));	2021-08-04T19:5
 v@dal.ca	use vaishnavi;	2021-08-04T20:17:54.818468900
 v@dal.ca	use vaishnavi;	2021-08-04T20:17:54.903294100
 v@dal.ca	drop table orders	2021-08-04T20:18:09.502247900
+yashvi@dal.ca	create	2021-08-04T21:25:22.886684100
+yashvi@dal.ca	create database db2;	2021-08-04T21:28:57.584130900
+yashvi@dal.ca	use db2;	2021-08-04T21:29:00.813459400
+yashvi@dal.ca	use db2;	2021-08-04T21:29:00.817407
+yashvi@dal.ca	transaction;	2021-08-04T21:30:21.834829400

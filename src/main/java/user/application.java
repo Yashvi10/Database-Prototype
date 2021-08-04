@@ -6,6 +6,7 @@ import java.io.IOException;
 import ERD.erdGenerator;
 import Resources.Database;
 import Resources.regex;
+import Transactions.Transaction;
 import parser.CreateTable;
 import parser.createDatabase;
 import parser.insertParser;
@@ -31,6 +32,10 @@ public class application {
 		if(query.toLowerCase().equals("generate erd;")) {
 			erdGenerator erd = new erdGenerator();
 			erd.ERD();
+		}
+		if(query.toLowerCase().equals("transaction;")) {
+			Transaction transaction = new Transaction();
+			transaction.transactionProcess();
 		}
 		logs.readTable.print(query);
 		String[] Token = query.split(" ");
