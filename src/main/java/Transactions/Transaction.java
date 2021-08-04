@@ -11,7 +11,7 @@ import logs.TransactionRecord;
 
 public class Transaction {
 
-	public void transactionProcess() throws IOException {
+	public void transactionProcess() throws IOException, InterruptedException {
 
 		Scanner scanner = new Scanner(System.in);
 		List<String> list = new ArrayList<>();
@@ -34,6 +34,7 @@ public class Transaction {
 				application app = new application();
 				System.out.println(list.get(i));
 				app.Application(list.get(i));
+				Thread.sleep(1000);
 			}
 			System.out.println("Transaction committed");
 		}
