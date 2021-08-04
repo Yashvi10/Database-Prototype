@@ -1,0 +1,2 @@
+yashvi@dal.ca	create database csci5308;	2021-08-04T12:18:50.670728800
+yashvi@dal.ca	create table students (id INT, Name VARCHAR(100));	2021-08-04T12:31:07.381113600
