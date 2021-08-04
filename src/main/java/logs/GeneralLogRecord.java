@@ -1,5 +1,7 @@
 package logs;
 
+import Resources.UserID;
+
 import javax.annotation.processing.Generated;
 import java.io.File;
 import java.io.FileWriter;
@@ -24,7 +26,7 @@ public class GeneralLogRecord {
 
     try {
       if (fileWriter != null) {
-        fileWriter.append("**********SQL Dump Generated Successfully**********" + "\t" + localDateTime + "\n");
+        fileWriter.append(UserID.getUserID() + "\t" + "**********SQL Dump Generated Successfully**********" + "\t" + localDateTime + "\n");
       }
       fileWriter.close();
     } catch (IOException e) {

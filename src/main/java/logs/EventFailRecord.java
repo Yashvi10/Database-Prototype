@@ -1,5 +1,7 @@
 package logs;
 
+import Resources.UserID;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -19,7 +21,7 @@ public class EventFailRecord implements EventLogger {
     System.out.println("System not responding!");
 
     FileWriter fileWriter = new FileWriter("LogAndDumpFiles/EventLogs/log.txt", true);
-    fileWriter.write("System not responding!" + " " + "Executed in " + timeELapsed / 1000000 + "ms" + "\n");
+    fileWriter.write(UserID.getUserID() + "\t" + "System not responding!" + " " + "Executed in " + timeELapsed / 1000000 + "ms" + "\n");
     fileWriter.close();
   }
 

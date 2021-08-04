@@ -1,5 +1,7 @@
 package user;
 
+import Resources.UserID;
+
 import java.io.*;
 import java.util.*;
 
@@ -11,14 +13,6 @@ import java.util.*;
  * well as contains login logic
  */
 public class login {
-
-  public static String getEmail_id() {
-    return email_id;
-  }
-
-  public static void setEmail_id(String email_id) {
-    login.email_id = email_id;
-  }
 
   FileWriter storeUserDetails;
   FileWriter mfaWriter;
@@ -283,6 +277,8 @@ public class login {
       System.out.println("Login failed! Entered answer does not match");
       return false;
     } else {
+      UserID userID = new UserID();
+      userID.setUserIDName(email_id);
       System.out.println("Login successful!!");
       return true;
     }
