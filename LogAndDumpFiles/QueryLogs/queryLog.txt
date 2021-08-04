@@ -169,7 +169,6 @@ deekshasareen@gmail.com	insert into test (id, name ,last_name) values (2,'Sofia'
 deekshasareen@gmail.com	use test;	2021-08-04T17:52:18.504181400
 deekshasareen@gmail.com	use test;	2021-08-04T17:52:18.507183100
 deekshasareen@gmail.com	insert into test (id, name ,last_name) values (3,'testfname', 'testlname');	2021-08-04T17:52:43.220587900
-=======
 yashvi@dal.ca	use yashvi;	2021-08-04T11:52:40.479482900
 yashvi@dal.ca	use yashvi;	2021-08-04T11:52:40.496480400
 yashvi@dal.ca	select * from firsttable;	2021-08-04T11:52:56.459789800

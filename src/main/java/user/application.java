@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import Resources.Database;
 import Resources.regex;
-
 import erd.erdGenerator;
 import Transactions.Transaction;
 import parser.CreateTable;
