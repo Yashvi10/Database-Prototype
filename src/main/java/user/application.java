@@ -35,8 +35,14 @@ public class application {
 			erd.ERD();
 		}
 		if(query.toLowerCase().equals("transaction;")) {
-			Transaction transaction = new Transaction();
-			transaction.transactionProcess();
+			if (Database.getDatabase() != null) {
+				Transaction transaction = new Transaction();
+			    transaction.transactionProcess();
+			}
+			else {
+				System.err.println("No database selected");
+			}
+			
 		}
 		logs.readTable.print(query);
 		String[] Token = query.split(" ");

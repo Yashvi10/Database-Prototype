@@ -359,3 +359,18 @@ yashvi@dal.ca	use db2;	2021-08-04T21:29:00.813459400
 yashvi@dal.ca	use db2;	2021-08-04T21:29:00.817407
 yashvi@dal.ca	transaction;	2021-08-04T21:30:21.834829400
 >>>>>>> 95e2d8d00fcc89975d9465130301c13ee24412c6
+deekshasareen@gmail.com	use test;	2021-08-04T22:08:41.956987300
+deekshasareen@gmail.com	use test;	2021-08-04T22:08:42.029419500
+deekshasareen@gmail.com	transaction;	2021-08-04T22:10:10.112605300
+deekshasareen@gmail.com	use test;	2021-08-04T22:11:10.348069100
+deekshasareen@gmail.com	use test;	2021-08-04T22:11:10.350078
+deekshasareen@gmail.com	CREATE	2021-08-04T22:11:19.114373900
+deekshasareen@gmail.com	use test;	2021-08-04T22:12:22.154861800
+deekshasareen@gmail.com	use test;	2021-08-04T22:12:22.156863200
+deekshasareen@gmail.com	CREATE	2021-08-04T22:12:28.898701200
+deekshasareen@gmail.com	transaction;	2021-08-04T22:19:55.125396100
+deekshasareen@gmail.com	use test;	2021-08-04T22:20:01.439142900
+deekshasareen@gmail.com	use test;	2021-08-04T22:20:01.441145800
+deekshasareen@gmail.com	CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));	2021-08-04T22:20:40.771721300
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-04T22:20:42.766801200
+deekshasareen@gmail.com	transaction;	2021-08-04T22:20:42.796823900
