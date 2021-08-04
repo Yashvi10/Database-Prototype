@@ -35,3 +35,7 @@ d@dal.ca		Table Created Successfully!	Executed in 1ms
 v@dal.ca	vaishnavi	Database Created Successfully!	Executed in 0ms
 v@dal.ca		Table Created Successfully!	Executed in 2ms
 yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	Row insertion successfull	Executed in 9ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 1ms
+yashvi@dal.ca	Row insertion successfull	Executed in 7ms

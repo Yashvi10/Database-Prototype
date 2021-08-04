@@ -36,6 +36,8 @@ public class Common {
 			SQLDumpGenerator.dump(query);
 		} else if (split[0].equals("create") && split[1].equals("table")) {
 			SQLDumpGeneratorTable.dump(query);
+		} else if(split[0].equals("insert")) {
+			SQLDumpGeneratorTable.dump(query);
 		}
 		application obj = new application();
 		obj.Application(query);

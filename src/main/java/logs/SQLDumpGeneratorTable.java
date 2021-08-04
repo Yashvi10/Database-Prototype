@@ -7,6 +7,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * File: SQLDumpGeneratorTable.java
+ *
+ * @author Yashvi Lad
+ * Purpose: Dump generation for create tables
+ * Description: This class writes dump file on the provided path
+ */
 public class SQLDumpGeneratorTable {
 
   private static boolean writeFile = true;

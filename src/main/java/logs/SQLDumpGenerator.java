@@ -6,13 +6,12 @@ import Resources.UserID;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDateTime;
 
 /**
  * File: SQLDumpGenerator.java
  *
  * @author Yashvi Lad
- * Purpose: Dump generation
+ * Purpose: Dump generation for databases
  * Description: This class writes dump file on the provided path
  */
 public class SQLDumpGenerator {

@@ -9,6 +9,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import Resources.Database;
 import Resources.regex;
+import logs.FailInsertionRecord;
+import logs.InsertRecord;
 
 /**
  * @author Deeksha Sareen: Insert query executioner
@@ -39,8 +41,13 @@ public class insertParser {
 		String[] entries = values.trim().split(",");
 		String[] columns = colNames.trim().split(",");
 		int size = 0;
+		long startTime = System.nanoTime();
 		if (entries.length != columns.length) {
 			System.err.println("Column names don't match the column values");
+			long endTime = System.nanoTime();
+			long timeElapsed = endTime - startTime;
+			FailInsertionRecord failInsertionRecord = new FailInsertionRecord();
+			failInsertionRecord.event("",timeElapsed);
 		} else {
 			for (int i = 0; i < columns.length; i++) {
 				BufferedReader in = new BufferedReader(new FileReader(metaTablePath));
@@ -88,6 +95,10 @@ public class insertParser {
 				}
 
 			}
+			long endTime = System.nanoTime();
+			long timeElapsed = endTime - startTime;
+			InsertRecord insertRecord = new InsertRecord();
+			insertRecord.event("Row",timeElapsed);
 
 		}
 

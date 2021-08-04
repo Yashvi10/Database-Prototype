@@ -269,3 +269,23 @@ yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.355986500
 yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.374978600
 yashvi@dal.ca	create table products(product_id int,product_name varchar(100));	2021-08-04T17:01:41.262126700
 >>>>>>> 548b27f284543378cd634e4fcb5f532a48d97d96
+yashvi@dal.ca	create database db;	2021-08-04T18:25:58.646955800
+yashvi@dal.ca	use db;	2021-08-04T18:26:36.056313200
+yashvi@dal.ca	use db;	2021-08-04T18:26:36.061314400
+yashvi@dal.ca	create table t1(id int);	2021-08-04T18:26:47.726305300
+yashvi@dal.ca	use db;	2021-08-04T18:28:01.214126400
+yashvi@dal.ca	use db;	2021-08-04T18:28:01.234119100
+yashvi@dal.ca	drop table t;	2021-08-04T18:28:08.382891500
+yashvi@dal.ca	use test;	2021-08-04T18:38:06.607686100
+yashvi@dal.ca	use test;	2021-08-04T18:38:06.628685200
+yashvi@dal.ca	insert into student (id, name, last_name) values (2,'Yashvi','Lad');	2021-08-04T18:38:59.674234300
+yashvi@dal.ca	create database db;	2021-08-04T18:46:52.973098200
+yashvi@dal.ca	use db;	2021-08-04T18:47:01.697611900
+yashvi@dal.ca	use db;	2021-08-04T18:47:01.700615600
+yashvi@dal.ca	create table t1(id int);	2021-08-04T18:47:14.751706300
+yashvi@dal.ca	use db;	2021-08-04T18:48:00.099214800
+yashvi@dal.ca	use db;	2021-08-04T18:48:00.120742900
+yashvi@dal.ca	drop t	2021-08-04T18:48:04.651786900
+yashvi@dal.ca	use test;	2021-08-04T18:50:23.644177300
+yashvi@dal.ca	use test;	2021-08-04T18:50:23.661172
+yashvi@dal.ca	insert into student (id, name ,last_name) values (3,'Vaishnavi','Jupudi');	2021-08-04T18:51:04.195948200
