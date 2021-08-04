@@ -56,3 +56,5 @@ deekshasareen@gmail.com	Table already exists! Executed in 2ms
 deekshasareen@gmail.com	Row insertion successfull	Executed in 2ms
 deekshasareen@gmail.com	Table already exists! Executed in 2728ms
 deekshasareen@gmail.com	Row insertion successfull	Executed in 2ms
+yashvi@dal.ca	Row insertion successfull	Executed in 119ms
+yashvi@dal.ca	Row insertion successfull	Executed in 2ms

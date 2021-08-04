@@ -415,3 +415,14 @@ yashvi@dal.ca	use yashvi;	2021-08-04T23:22:31.913532400
 yashvi@dal.ca	select * from books;	2021-08-04T23:22:57.832639500
 yashvi@dal.ca	select * from products;	2021-08-04T23:22:57.850143100
 yashvi@dal.ca	transaction;	2021-08-04T23:22:57.860140800
+yashvi@dal.ca	use yashvi;	2021-08-05T02:06:18.823855600
+yashvi@dal.ca	use yashvi;	2021-08-05T02:06:19.195933
+yashvi@dal.ca	select * from books;	2021-08-05T02:10:49.311486
+yashvi@dal.ca	insert into books(bood_id,book_name) values (1,'book1');	2021-08-05T02:18:12.838623
+yashvi@dal.ca	select * from books;	2021-08-05T02:18:12.842604600
+yashvi@dal.ca	transaction;	2021-08-05T02:18:12.955829200
+yashvi@dal.ca	insert into books (book_id, book_name) values (1, 'book1');	2021-08-05T02:18:52.949048100
+yashvi@dal.ca	select * from books;	2021-08-05T02:18:58.605188
+yashvi@dal.ca	insert into books (book_id, book_name) values (1, 'book1');	2021-08-05T02:19:38.058182800
+yashvi@dal.ca	select * from books;	2021-08-05T02:19:38.092318300
+yashvi@dal.ca	transaction;	2021-08-05T02:19:38.098308700

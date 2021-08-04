@@ -31,6 +31,7 @@ public class Common {
 		System.out.println("Enter query ~");
 		Scanner scanner = new Scanner(System.in);
 		String query = scanner.nextLine();
+		logs.readTable.print(query);
 		String[] split = query.split(" ");
 		if (split[0].equals("create") && split[1].equals("database")) {
 			SQLDumpGenerator.dump(query);
