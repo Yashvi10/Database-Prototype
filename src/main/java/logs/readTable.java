@@ -1,39 +1,50 @@
 package logs;
 
-import java.io.*;
+import Resources.UserID;
+import user.login;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+
+/**
+ * File: readTable.java
+ *
+ * @author Yashvi Lad
+ * Purpose: Query log printing
+ * Description: This class will write all query logs in one text file.
+ */
 public class readTable {
 
-    private static FileWriter log = null;
-    private static boolean fileOut = true;
+  private static boolean fileOut = true;
 
-//    public static void println(String output) {
-//      print(output+"\n");
-//    }
+  /*
+   * This method writes query logs into text file with date-time, user id  and message
+   * */
+  public static void print(String output) {
+    LocalDateTime localDateTime = LocalDateTime.now();
 
-    public static void print(String output) {
-      if (fileOut) {
+    if (fileOut) {
 
-        File file = new File("src/main/java/logs/log.txt");
-        try {
+      String path = "LogAndDumpFiles/QueryLogs/queryLog.txt";
+      File file = new File(path);
+      try {
 
-          ObjectOutputStream objectOut = new ObjectOutputStream(new FileOutputStream(file));
+        FileWriter fileWriter = new FileWriter(file, true);
 
-//          System.out.println(output);
-          objectOut.writeObject(output);
+        fileWriter.write(UserID.getUserID() + "\t" + output + "\t" + localDateTime + "\n");
 
-          objectOut.flush();
-          objectOut.close();
+        fileWriter.flush();
+        fileWriter.close();
 
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-      } else {
-        System.out.print(output);
+      } catch (IOException e) {
+        e.printStackTrace();
       }
+    } else {
+      System.out.print(output);
     }
-//    public static void setConsoleOut() {
-//      fileOut = false;
-//    }
+  }
+
 }
 
