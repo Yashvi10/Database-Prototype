@@ -10,3 +10,4 @@ databases/test	insert into student (id, name ,last_name) values (3,'Vaishnavi','
 databases/test	insert into student (id, name, last_name) values (3,'Deeksha','Sareen');
 databases/test	insert into student (id, name, last_name) values (4,'Deeksha','Sareen');
 create database db2;
+databases/yashvi	insert into books (book_id, book_name) values (1, 'book1');

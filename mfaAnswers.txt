@@ -18,3 +18,7 @@ Enter your favourite food:pasta deekshasareen@gmail.com
 Enter your favourite color:yellow sofia@gmail.com
 Enter your favourite animal:zebra sofia@gmail.com
 Enter your favourite food:spagetti sofia@gmail.com
+
+Enter your favourite color:green k@dal.ca
+Enter your favourite animal:pig k@dal.ca
+Enter your favourite food:pizzza k@dal.ca
