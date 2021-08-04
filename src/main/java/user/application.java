@@ -7,6 +7,7 @@ import Resources.regex;
 import parser.CreateTable;
 import parser.UpdateQueryValidity;
 import parser.createDatabase;
+import parser.insertParser;
 import parser.selectExecutioner;
 import parser.syntaxValidation;
 
@@ -102,6 +103,22 @@ public class application {
 				System.err.println("No database selected");
 			}
 		}
+		if (Token[0].toLowerCase().equals("insert")) {
+			if (Database.getDatabase() != null) {
+
+				if (syntax.validateQuerySyntax(query.toLowerCase(), regex.INSERT)) {
+					insertParser insert = new insertParser();
+					insert.insertQuery(query);
+				} else {
+					System.err.println("Syntax Error");
+					System.err.println(
+							"The expected format is... INSERT INTO <TABLENAME> VALUES (VALUE1,VALUE2,...VALUEN);");
+				}
+			} else {
+				System.err.println("No database selected");
+			}
+		}
+
 		if (query.toLowerCase().equals("exit")) {
 			System.exit(0);
 		}

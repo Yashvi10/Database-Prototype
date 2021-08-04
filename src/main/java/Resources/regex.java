@@ -13,7 +13,7 @@ public class regex {
 	public static final String DELETE = "";
 	public static final String UPDATE = "";
 	public static final String DATABASE = "^use\s+[^;]*;$";
-	public static final String INSERT = "";
+	public static final String INSERT = "insert into\\s(.*?)\\s(.*?)\\svalues\\s(.*?);";
 	public static final String CREATEDB = "^create\sdatabase\s[^;]*;$";
-
+	public static final String BETWEENBRACKETS = "\\((.*?)\\)";
 }
