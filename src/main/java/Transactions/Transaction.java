@@ -36,7 +36,8 @@ public class Transaction {
 			}
 			System.out.println("Transaction committed");
 		}
-
+		TransactionRecord transactionRecord = new TransactionRecord();
+		transactionRecord.transactionLog(list);
 	}
 
 }

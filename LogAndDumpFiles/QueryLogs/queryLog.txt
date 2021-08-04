@@ -394,3 +394,12 @@ deekshasareen@gmail.com	generate erd;	2021-08-04T23:06:55.743924400
 deekshasareen@gmail.com	use test;	2021-08-04T23:09:42.680065100
 deekshasareen@gmail.com	use test;	2021-08-04T23:09:42.785722300
 deekshasareen@gmail.com	generate erd;	2021-08-04T23:09:48.572154600
+yashvi@dal.ca	use yashvi;	2021-08-04T23:20:15.083490300
+yashvi@dal.ca	use yashvi;	2021-08-04T23:20:15.119015800
+yashvi@dal.ca	select * from products;	2021-08-04T23:20:55.973181500
+yashvi@dal.ca	select * from books;	2021-08-04T23:20:55.988176500
+yashvi@dal.ca	use yashvi;	2021-08-04T23:22:31.890331
+yashvi@dal.ca	use yashvi;	2021-08-04T23:22:31.913532400
+yashvi@dal.ca	select * from books;	2021-08-04T23:22:57.832639500
+yashvi@dal.ca	select * from products;	2021-08-04T23:22:57.850143100
+yashvi@dal.ca	transaction;	2021-08-04T23:22:57.860140800
