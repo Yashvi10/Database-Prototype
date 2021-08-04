@@ -99,6 +99,15 @@ public class application {
 				System.err.println("No database selected");
 			}
 		}
+
+		if (Token[0].toLowerCase().equals("drop")) {
+			if (Database.getDatabase() != null) {
+				dropTable drop = new dropTable();
+				drop.dropTableName(query);
+			} else {
+				System.err.println("No database selected");
+			}
+		}
 		if (query.toLowerCase().equals("exit")) {
 			System.exit(0);
 		}
