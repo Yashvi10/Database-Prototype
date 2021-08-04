@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import Resources.Database;
+import logs.ExistRecord;
+import logs.TableRecord;
 
 /**
  * @author Deeksha Sareen
@@ -11,20 +13,29 @@ import Resources.Database;
  */
 public class CreateTable {
 
-	public void createTable(String query) {
+	public void createTable(String query) throws IOException {
 //CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));
 		String tablePath = Database.getDatabase() + "/" + getTable(query);
 		String tableMetaPath = Database.getDatabase() + "/meta_" + getTable(query);
 		boolean flag = false;
+		ExistRecord existRecord = new ExistRecord();
+		TableRecord tableRecord = new TableRecord();
 		File file = new File(tablePath);
+		long startTime = System.nanoTime();
 		if (file.exists()) {
 			System.err.println("Table with name " + getTable(query) + " already exists");
+			long endTime = System.nanoTime();
+			long timeElapsed = endTime - startTime;
+			existRecord.event("Table",timeElapsed);
 		} else {
 			try {
 				flag = file.createNewFile();
 				file = new File(tableMetaPath);
 				if(file.exists()) {
 				   System.err.println("Metadata file with name " + getTable(query) + " already exists");
+					long endTime = System.nanoTime();
+					long timeElapsed = endTime - startTime;
+					existRecord.event("Metadata file",timeElapsed);
 				}
 				else {
 					file.createNewFile();
@@ -39,6 +50,9 @@ public class CreateTable {
 		String[] tableCols = colList[0].split(",");
 		if (flag) {
 			System.out.println("Table successfully created.");
+			long endTime = System.nanoTime();
+			long timeElapsed = endTime - startTime;
+			tableRecord.event("",timeElapsed);
 			FileWriter fileWriter;
 			try {
 				fileWriter = new FileWriter(tableMetaPath);

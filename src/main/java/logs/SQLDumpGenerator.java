@@ -18,19 +18,20 @@ public class SQLDumpGenerator {
 
   private static boolean writeFile = true;
 
-  //this method writes dump into text file.(writes user, query and date-time)
-  public static void dump(String query) {
+  public SQLDumpGenerator() throws IOException {
+  }
 
-    LocalDateTime localDateTime = LocalDateTime.now();
+  //this method writes dump into text file.(writes user, query and date-time)
+  public static void dump(String query) throws IOException {
+
     if(writeFile) {
 
       String path = "LogAndDumpFiles/SQLDump/generatedDump.txt";
       File file = new File(path);
       try {
-
         FileWriter fileWriter = new FileWriter(file, true);
 
-        fileWriter.write(UserID.getUserID() + "\t" + query + "\t" + localDateTime + "\n");
+        fileWriter.write(query + "\n");
 
         fileWriter.flush();
         fileWriter.close();

@@ -1,6 +1,8 @@
 package parser;
 
 import Resources.Database;
+import logs.QueryError;
+import logs.QueryRecord;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,12 +15,21 @@ public class updateValidate {
 
   Database queryToken = new Database();
   ArrayList<String> listOfColumns= new ArrayList<String>();
+  QueryRecord queryRecord = new QueryRecord();
+  QueryError queryError = new QueryError();
 
  public void update(String query) throws IOException {
+   long startTime = System.nanoTime();
    if(updateSyntax(query)){
      System.out.println("Update successful");
+     long endTime = System.nanoTime();
+     long timeElapsed = endTime - startTime;
+     queryRecord.event(query,timeElapsed);
    } else {
      System.out.println("Update unsuccessful");
+     long endTime = System.nanoTime();
+     long timeElapsed = endTime - startTime;
+     queryError.event(query,timeElapsed);
    }
  }
 

@@ -20,7 +20,7 @@ public class ExistRecord implements EventLogger {
   public void event(String name, long timeELapsed) throws IOException {
 
     FileWriter fileWriter = new FileWriter("LogAndDumpFiles/EventLogs/log.txt", true);
-    fileWriter.write(UserID.getUserID() + "\t" + name + "\tAlready exists!" + " " + "Executed in " + timeELapsed / 1000000 + "ms" + "\n");
+    fileWriter.write(UserID.getUserID() + "\t" + name + " already exists!" + " " + "Executed in " + timeELapsed / 1000000 + "ms" + "\n");
     fileWriter.close();
   }
 

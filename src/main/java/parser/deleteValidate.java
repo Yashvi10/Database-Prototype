@@ -1,6 +1,8 @@
 package parser;
 
 import Resources.Database;
+import logs.QueryError;
+import logs.QueryRecord;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,6 +15,8 @@ public class deleteValidate {
   Database queryToken = new Database();
   ArrayList<String> listOfColumns = new ArrayList<String>();
   deleteParser parser = new deleteParser();
+  QueryRecord queryRecord = new QueryRecord();
+  QueryError queryError = new QueryError();
 
 
   public void delete(String query) throws IOException {
@@ -22,6 +26,7 @@ public class deleteValidate {
   }
 
   public boolean deleteSyntax(String query) throws IOException {
+    long startTime = System.nanoTime();
     if (query.contains("where")) {
       String[] deleteParts = query.split("where");
       String whereCondition = deleteParts[1];
@@ -42,8 +47,14 @@ public class deleteValidate {
         parser.deleteAllRowsQuery(queryToken);
         return true;
       }
+      long endTime = System.nanoTime();
+      long timeElapsed = endTime - startTime;
+      queryRecord.event(query,timeElapsed);
     } else{
       System.out.println("Incorrect syntax. Please verify");
+      long endTime = System.nanoTime();
+      long timeElapsed = endTime - startTime;
+      queryError.event("",timeElapsed);
     }
     return false;
   }

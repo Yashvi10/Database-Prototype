@@ -27,3 +27,34 @@ yashvi@dal.ca	use csci5408;	2021-08-04T12:24:25.921857100
 yashvi@dal.ca	use csci5408;	2021-08-04T12:24:25.949409900
 yashvi@dal.ca	create table students (id INT, Name VARCHAR(100));	2021-08-04T12:31:07.462363500
 yashvi@dal.ca		2021-08-04T12:31:51.884853
+yashvi@dal.ca	use vaishnavi;	2021-08-04T12:46:31.606548600
+yashvi@dal.ca	use vaishnavi;	2021-08-04T12:46:31.633631600
+yashvi@dal.ca	update ttt set 	2021-08-04T12:47:16.501555300
+yashvi@dal.ca	use vaishnavi;	2021-08-04T12:48:00.710371100
+yashvi@dal.ca	use vaishnavi;	2021-08-04T12:48:00.729495500
+yashvi@dal.ca		2021-08-04T12:48:43.967749
+yashvi@dal.ca	update ttt set lname=sareen where id=1;	2021-08-04T12:49:29.565598400
+yashvi@dal.ca	use d;	2021-08-04T13:00:15.861034800
+yashvi@dal.ca	use d;	2021-08-04T13:00:15.888329100
+yashvi@dal.ca	create table tb(id int,tbName varchar(100));	2021-08-04T13:00:39.974069200
+yashvi@dal.ca	use csci5408;	2021-08-04T14:24:00.248425600
+yashvi@dal.ca	use csci5408;	2021-08-04T14:24:00.289809100
+yashvi@dal.ca	select * from table1;	2021-08-04T14:24:22.344135400
+yashvi@dal.ca	use vaishnavi;	2021-08-04T14:24:57.230650600
+yashvi@dal.ca	use vaishnavi;	2021-08-04T14:24:57.249653800
+yashvi@dal.ca	update ttt set lname='sareen' where id=1	2021-08-04T14:25:32.104713300
+yashvi@dal.ca	create database db2;	2021-08-04T14:30:42.523714100
+yashvi@dal.ca	create database db3;	2021-08-04T14:31:56.950195600
+yashvi@dal.ca	create database db5;	2021-08-04T14:35:08.501180200
+yashvi@dal.ca	create database db6;	2021-08-04T14:35:25.172624800
+yashvi@dal.ca	create database db1;	2021-08-04T14:39:11.373975500
+yashvi@dal.ca	create database db2;	2021-08-04T14:39:27.538531500
+yashvi@dal.ca	create table db;	2021-08-04T14:45:22.679906400
+yashvi@dal.ca	create database db;	2021-08-04T14:45:31.916913400
+yashvi@dal.ca	create database db2;	2021-08-04T14:45:56.129385700
+yashvi@dal.ca	create database db3;	2021-08-04T14:46:35.900070600
+yashvi@dal.ca	use yashvi;	2021-08-04T14:52:59.504437300
+yashvi@dal.ca	use yashvi;	2021-08-04T14:52:59.556821400
+yashvi@dal.ca	use vaishnavi;	2021-08-04T14:54:06.795889500
+yashvi@dal.ca	use vaishnavi;	2021-08-04T14:54:06.814881900
+yashvi@dal.ca	delete from ttt where id=1	2021-08-04T14:54:22.338862100
