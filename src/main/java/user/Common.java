@@ -1,5 +1,7 @@
 package user;
 
+import logs.SQLDumpGenerator;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -25,6 +27,10 @@ public class Common {
 		    System.out.println("Enter query ~");
 		    Scanner scanner = new Scanner(System.in);
 		    String query = scanner.nextLine();
+			String[] split = query.split(" ");
+			if(split[0].equals("create")) {
+				SQLDumpGenerator.dump(query);
+			}
 		    application obj = new application();
 		    obj.Application(query);
 		    takeinput();

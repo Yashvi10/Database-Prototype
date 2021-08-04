@@ -17,3 +17,13 @@ yashvi@dal.ca	use yashvi;	2021-08-04T11:56:12.492591400
 yashvi@dal.ca	use yashvi;	2021-08-04T11:56:12.513592200
 yashvi@dal.ca	create database csci5308;	2021-08-04T11:56:28.903192200
 yashvi@dal.ca	create table students;	2021-08-04T11:56:56.947915700
+yashvi@dal.ca	create database csci5001;	2021-08-04T12:10:29.610946200
+yashvi@dal.ca	create database db1;	2021-08-04T12:12:38.748304900
+yashvi@dal.ca	create database data;	2021-08-04T12:16:45.204447100
+yashvi@dal.ca	create database d;	2021-08-04T12:17:44.764998100
+yashvi@dal.ca	create database csci5308;	2021-08-04T12:18:50.690725800
+yashvi@dal.ca	use csci5308;	2021-08-04T12:24:07.045407200
+yashvi@dal.ca	use csci5408;	2021-08-04T12:24:25.921857100
+yashvi@dal.ca	use csci5408;	2021-08-04T12:24:25.949409900
+yashvi@dal.ca	create table students (id INT, Name VARCHAR(100));	2021-08-04T12:31:07.462363500
+yashvi@dal.ca		2021-08-04T12:31:51.884853
