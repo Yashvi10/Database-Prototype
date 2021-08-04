@@ -2,6 +2,7 @@ package user;
 
 import Resources.UserID;
 import logs.SQLDumpGenerator;
+import logs.SQLDumpGeneratorTable;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -30,8 +31,10 @@ public class Common {
 		    Scanner scanner = new Scanner(System.in);
 		    String query = scanner.nextLine();
 			String[] split = query.split(" ");
-			if(split[0].equals("create")) {
+			if(split[0].equals("create") && split[1].equals("database")) {
 				SQLDumpGenerator.dump(query);
+			} else if(split[0].equals("create") && split[1].equals("table")) {
+				SQLDumpGeneratorTable.dump(query);
 			}
 		    application obj = new application();
 		    obj.Application(query);

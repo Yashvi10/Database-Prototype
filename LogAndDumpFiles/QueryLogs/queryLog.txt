@@ -58,3 +58,52 @@ yashvi@dal.ca	use yashvi;	2021-08-04T14:52:59.556821400
 yashvi@dal.ca	use vaishnavi;	2021-08-04T14:54:06.795889500
 yashvi@dal.ca	use vaishnavi;	2021-08-04T14:54:06.814881900
 yashvi@dal.ca	delete from ttt where id=1	2021-08-04T14:54:22.338862100
+yashvi@dal.ca	create database db;	2021-08-04T16:31:32.979271200
+yashvi@dal.ca	create database db1;	2021-08-04T16:32:50.541362500
+yashvi@dal.ca	create database db2;	2021-08-04T16:32:58.656496400
+v@dal.ca	create database db3;	2021-08-04T16:35:05.993406800
+d@dal.ca	create database db4;	2021-08-04T16:35:41.922165900
+yashvi@dal.ca	use db1;	2021-08-04T16:36:34.785985100
+yashvi@dal.ca	use db1;	2021-08-04T16:36:34.845090100
+yashvi@dal.ca	create table table1(id int,name varchar(100));	2021-08-04T16:36:57.388155500
+v@dal.ca	use db3;	2021-08-04T16:37:58.162866100
+v@dal.ca	use db3;	2021-08-04T16:37:58.180860200
+v@dal.ca	create table orders(order_id int,item_name varchar(100));	2021-08-04T16:38:48.568999500
+d@dal.ca	use db4;	2021-08-04T16:40:05.012155600
+d@dal.ca	use db4;	2021-08-04T16:40:05.037151600
+d@dal.ca	create table books(book_id int,book_name varchar(100));	2021-08-04T16:40:29.036266400
+yashvi@dal.ca	use db2;	2021-08-04T16:41:16.605267100
+yashvi@dal.ca	use db2;	2021-08-04T16:41:16.626277400
+yashvi@dal.ca	use db2;	2021-08-04T16:42:32.458170800
+yashvi@dal.ca	use db2;	2021-08-04T16:42:32.481167600
+yashvi@dal.ca	create table customers(customer_id int,customer_name varchar(100));	2021-08-04T16:43:05.659576400
+yashvi@dal.ca	use db1;	2021-08-04T16:45:08.938971500
+yashvi@dal.ca	use db1;	2021-08-04T16:45:08.959968800
+yashvi@dal.ca	create table person(person_id int,person_name varchar(100));	2021-08-04T16:45:34.840655300
+yashvi@dal.ca	create database Yashvi;	2021-08-04T16:47:20.553691
+yashvi@dal.ca	use Yashvi;	2021-08-04T16:47:32.165965600
+yashvi@dal.ca	use Yashvi;	2021-08-04T16:47:32.167973
+yashvi@dal.ca	create table orders(order_id int,order_name varchar(100));	2021-08-04T16:47:57.344644100
+yashvi@dal.ca	use yashvi;	2021-08-04T16:51:08.370913200
+yashvi@dal.ca	use yashvi;	2021-08-04T16:51:08.389911
+yashvi@dal.ca	create database db;	2021-08-04T16:51:23.031472200
+yashvi@dal.ca	create database db;	2021-08-04T16:55:58.748833900
+yashvi@dal.ca	use db;	2021-08-04T16:56:11.185435200
+yashvi@dal.ca	use db;	2021-08-04T16:56:11.189436
+yashvi@dal.ca	create table t1(id int);	2021-08-04T16:56:23.817213300
+yashvi@dal.ca	create database yashvi;	2021-08-04T16:57:18.108253900
+yashvi@dal.ca	use yashvi;	2021-08-04T16:57:22.283846400
+yashvi@dal.ca	use yashvi;	2021-08-04T16:57:22.288844100
+yashvi@dal.ca	create table books(book_id int,book_name varchar(100));	2021-08-04T16:57:43.898264600
+d@dal.ca	create database deeksha;	2021-08-04T16:58:35.054853400
+d@dal.ca	use deeksha	2021-08-04T16:58:38.828288500
+d@dal.ca	use deeksha;	2021-08-04T16:58:45.414346100
+d@dal.ca	use deeksha;	2021-08-04T16:58:45.418339900
+d@dal.ca	create table customers(customer_id int,customer_name varchar(100));	2021-08-04T16:59:13.399108700
+v@dal.ca	create database vaishnavi;	2021-08-04T17:00:12.147620400
+v@dal.ca	use vaishnavi;	2021-08-04T17:00:18.051625100
+v@dal.ca	use vaishnavi;	2021-08-04T17:00:18.078240700
+v@dal.ca	create table orders(order_id int,order_name varchar(100));	2021-08-04T17:00:43.763586900
+yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.355986500
+yashvi@dal.ca	use yashvi;	2021-08-04T17:01:15.374978600
+yashvi@dal.ca	create table products(product_id int,product_name varchar(100));	2021-08-04T17:01:41.262126700

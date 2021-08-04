@@ -13,3 +13,25 @@ yashvi@dal.ca	db2	Database Created Successfully!	Executed in 0ms
 yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
 yashvi@dal.ca	db2	Database Created Successfully!	Executed in 1ms
 yashvi@dal.ca	db3	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 20ms
+yashvi@dal.ca	db1	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db2	Database Created Successfully!	Executed in 1ms
+v@dal.ca	db3	Database Created Successfully!	Executed in 0ms
+d@dal.ca	db4	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+v@dal.ca		Table Created Successfully!	Executed in 1ms
+d@dal.ca		Table Created Successfully!	Executed in 2ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 27ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+yashvi@dal.ca	Yashvi	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 2ms
+yashvi@dal.ca	yashvi	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+d@dal.ca	deeksha	Database Created Successfully!	Executed in 0ms
+d@dal.ca		Table Created Successfully!	Executed in 1ms
+v@dal.ca	vaishnavi	Database Created Successfully!	Executed in 0ms
+v@dal.ca		Table Created Successfully!	Executed in 2ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms

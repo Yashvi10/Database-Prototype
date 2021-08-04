@@ -6,20 +6,12 @@ import Resources.UserID;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDateTime;
 
-/**
- * File: SQLDumpGenerator.java
- *
- * @author Yashvi Lad
- * Purpose: Dump generation
- * Description: This class writes dump file on the provided path
- */
-public class SQLDumpGenerator {
+public class SQLDumpGeneratorTable {
 
   private static boolean writeFile = true;
 
-  public SQLDumpGenerator() throws IOException {
+  public SQLDumpGeneratorTable() throws IOException {
   }
 
   //this method writes dump into text file.(writes user, query and date-time)
@@ -27,12 +19,12 @@ public class SQLDumpGenerator {
 
     if(writeFile) {
 
-      String path = "LogAndDumpFiles/SQLDump/"+UserID.getUserID()+"-generatedDump.txt";
+      String path = "LogAndDumpFiles/SQLDump/"+ UserID.getUserID()+"-generatedDump.txt";
       File file = new File(path);
       try {
         FileWriter fileWriter = new FileWriter(file, true);
 
-        fileWriter.write(query + "\n");
+        fileWriter.write(Database.getDatabase() + "\t"+query + "\n");
 
         fileWriter.flush();
         fileWriter.close();
@@ -46,5 +38,6 @@ public class SQLDumpGenerator {
       System.out.print(query);
     }
   }
+
 
 }
