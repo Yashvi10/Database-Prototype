@@ -39,3 +39,9 @@ yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
 yashvi@dal.ca	Row insertion successfull	Executed in 9ms
 yashvi@dal.ca	db	Database Created Successfully!	Executed in 1ms
 yashvi@dal.ca	Row insertion successfull	Executed in 7ms
+yashvi@dal.ca	Row insertion successfull	Executed in 17ms
+yashvi@dal.ca	Row insertion successfull	Executed in 5ms
+d@dal.ca		Table Created Successfully!	Executed in 17ms
+d@dal.ca		Table Created Successfully!	Executed in 2ms
+v@dal.ca		Table Created Successfully!	Executed in 17ms
+v@dal.ca	Table deleted successfully	Executed in 13372ms

@@ -1,5 +1,7 @@
 package Transactions;
 
+import parser.selectExecutioner;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,11 +22,11 @@ public class Transaction {
       list.add(str);
     }
 
-//    for(int i = 0;i<list.size();i++) {
-//      selectExecutioner se = new selectExecutioner();
-//      String[] value = list.get(i).split(" ");
-//      se.executeSelect(value[0]);
-//    }
+    for(int i = 0;i<list.size();i++) {
+      selectExecutioner se = new selectExecutioner();
+      String[] value = list.get(i).split(" ");
+      se.executeSelect(value[0]);
+    }
   }
 
   public static void main(String[] args) throws IOException {

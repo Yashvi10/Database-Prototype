@@ -7,3 +7,5 @@ databases/db	create table t1(id int);
 create database db;
 databases/db	create table t1(id int);
 databases/test	insert into student (id, name ,last_name) values (3,'Vaishnavi','Jupudi');
+databases/test	insert into student (id, name, last_name) values (3,'Deeksha','Sareen');
+databases/test	insert into student (id, name, last_name) values (4,'Deeksha','Sareen');

@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import Resources.Database;
@@ -18,6 +20,7 @@ import logs.InsertRecord;
  */
 public class insertParser {
 
+	Lock lock = new ReentrantLock();
 	public void insertQuery(String query) throws IOException {
 		// String[] queryValues = query.split(" ");
 		String colNames = "";
@@ -50,6 +53,7 @@ public class insertParser {
 			failInsertionRecord.event("",timeElapsed);
 		} else {
 			for (int i = 0; i < columns.length; i++) {
+				lock.lock();
 				BufferedReader in = new BufferedReader(new FileReader(metaTablePath));
 				while ((line = in.readLine()) != null) {
 					if (line.contains(columns[i].trim()) && line.toLowerCase().contains("primary--key")) {
@@ -90,6 +94,7 @@ public class insertParser {
 					fileWriter = new FileWriter(tablePath, true);
 					fileWriter.write(System.lineSeparator());
 					fileWriter.write(output);
+					lock.unlock();
 					System.out.println("Row successfully inserted.");
 					fileWriter.flush();
 				}

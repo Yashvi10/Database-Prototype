@@ -289,3 +289,19 @@ yashvi@dal.ca	drop t	2021-08-04T18:48:04.651786900
 yashvi@dal.ca	use test;	2021-08-04T18:50:23.644177300
 yashvi@dal.ca	use test;	2021-08-04T18:50:23.661172
 yashvi@dal.ca	insert into student (id, name ,last_name) values (3,'Vaishnavi','Jupudi');	2021-08-04T18:51:04.195948200
+yashvi@dal.ca	use test;	2021-08-04T19:45:13.757865200
+yashvi@dal.ca	use test;	2021-08-04T19:45:13.826034800
+yashvi@dal.ca	insert into student (id, name, last_name) values (3,'Deeksha','Sareen');	2021-08-04T19:45:55.093013900
+yashvi@dal.ca	insert into student (id, name, last_name) values (4,'Deeksha','Sareen');	2021-08-04T19:47:04.795833200
+d@dal.ca	use deeksha;	2021-08-04T19:53:33.868346700
+d@dal.ca	use deeksha;	2021-08-04T19:53:33.887325100
+d@dal.ca	create table courses(id int,name varchar(100));	2021-08-04T19:54:07.015688
+d@dal.ca	use deeksha;	2021-08-04T19:55:03.521338700
+d@dal.ca	use deeksha;	2021-08-04T19:55:03.554334
+d@dal.ca	create table courses(id int,name varchar(100));	2021-08-04T19:55:25.896741500
+v@dal.ca	use vaishnavi;	2021-08-04T19:56:19.295949400
+v@dal.ca	use vaishnavi;	2021-08-04T19:56:19.326829
+v@dal.ca	create table shops(shop_id int,shop_name varchar(100));	2021-08-04T19:56:43.959707800
+v@dal.ca	use vaishnavi;	2021-08-04T20:17:54.818468900
+v@dal.ca	use vaishnavi;	2021-08-04T20:17:54.903294100
+v@dal.ca	drop table orders	2021-08-04T20:18:09.502247900
