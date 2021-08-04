@@ -18,8 +18,7 @@ public class CreateTable {
 
 	Lock lock = new ReentrantLock();
 	public void createTable(String query) throws IOException {
-//CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name));
-		lock.lock();
+//CREATE TABLE student(id INT PRIMARY KEY, name VARCHAR(100), last_name VARCHAR(100), FOREIGN KEY last_name REFERENCES T1(last_name))
 		String tableName = getTable(query);
 		String tablePath = Database.getDatabase() + "/" + getTable(query);
 		String tableMetaPath = Database.getDatabase() + "/meta_" + getTable(query);
@@ -30,7 +29,6 @@ public class CreateTable {
 		long startTime = System.nanoTime();
 		if (file.exists()) {
 			System.err.println("Table with name " + getTable(query) + " already exists");
-			lock.unlock();
 			long endTime = System.nanoTime();
 			long timeElapsed = endTime - startTime;
 			existRecord.event("Table",timeElapsed);
@@ -40,14 +38,13 @@ public class CreateTable {
 				file = new File(tableMetaPath);
 				if(file.exists()) {
 				   System.err.println("Metadata file with name " + getTable(query) + " already exists");
-				   lock.unlock();
 					long endTime = System.nanoTime();
 					long timeElapsed = endTime - startTime;
 					existRecord.event("Metadata file",timeElapsed);
 				}
 				else {
 					file.createNewFile();
-					lock.unlock();
+					
 				}
 				
 			} catch (IOException e) {

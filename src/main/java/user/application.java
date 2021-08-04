@@ -24,7 +24,7 @@ public class application {
 
 	syntaxValidation syntax = new syntaxValidation();
 
-	public void Application(String query) throws IOException {
+	public void Application(String query) throws IOException, InterruptedException {
 
 		if (query.toLowerCase().equals("exit")) {
 			System.exit(0);

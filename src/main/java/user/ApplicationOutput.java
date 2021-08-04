@@ -22,12 +22,12 @@ public class ApplicationOutput {
 			return applicationOutput;
 		}
 		
-		void displayOutput() throws SQLException, IOException {
+		void displayOutput() throws SQLException, IOException, InterruptedException {
 			loadMainScreenContent();
 		    
 		}
 		
-		private void loadMainScreenContent() throws IOException {
+		private void loadMainScreenContent() throws IOException, InterruptedException {
 
 			List<String> selectionOptions = getSelectionOptions();
 			

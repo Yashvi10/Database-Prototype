@@ -24,7 +24,7 @@ public class selectExecutioner {
 	public void executeSelect(String query) throws IOException {
 		SelectParser parse = new SelectParser();
 		Map<String, ArrayList<String>> mapping = new HashMap<>(parse.parsingAttributes(query));
-		System.out.println(mapping);
+		//System.out.println(mapping);
 		ArrayList<String> tablename = new ArrayList<>(mapping.get("From"));
 		ArrayList<String> colFields = new ArrayList<>(mapping.get("Attributes"));
 		if (mapping.containsKey("Where")) {
@@ -35,7 +35,7 @@ public class selectExecutioner {
 		}
 
 		String store = Database.getDatabase() + "/" + tablename.get(0) + ".txt";
-		System.out.println(store);
+		//System.out.println(store);
 		File tableFile = new File(store);
 		if (tableFile.exists()) {
 			if (colFields.get(0).equals("*") && wherefields.equals("")) {
@@ -56,7 +56,6 @@ public class selectExecutioner {
 
 						BufferedReader in = new BufferedReader(new FileReader(store));
 						while ((line = in.readLine()) != null) {
-
 							if (line.contains(whereclauses[i].trim())) {
 								System.out.println(line);
 							}

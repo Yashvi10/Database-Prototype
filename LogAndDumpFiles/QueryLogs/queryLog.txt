@@ -415,14 +415,105 @@ yashvi@dal.ca	use yashvi;	2021-08-04T23:22:31.913532400
 yashvi@dal.ca	select * from books;	2021-08-04T23:22:57.832639500
 yashvi@dal.ca	select * from products;	2021-08-04T23:22:57.850143100
 yashvi@dal.ca	transaction;	2021-08-04T23:22:57.860140800
-yashvi@dal.ca	use yashvi;	2021-08-05T02:06:18.823855600
-yashvi@dal.ca	use yashvi;	2021-08-05T02:06:19.195933
-yashvi@dal.ca	select * from books;	2021-08-05T02:10:49.311486
-yashvi@dal.ca	insert into books(bood_id,book_name) values (1,'book1');	2021-08-05T02:18:12.838623
-yashvi@dal.ca	select * from books;	2021-08-05T02:18:12.842604600
-yashvi@dal.ca	transaction;	2021-08-05T02:18:12.955829200
-yashvi@dal.ca	insert into books (book_id, book_name) values (1, 'book1');	2021-08-05T02:18:52.949048100
-yashvi@dal.ca	select * from books;	2021-08-05T02:18:58.605188
-yashvi@dal.ca	insert into books (book_id, book_name) values (1, 'book1');	2021-08-05T02:19:38.058182800
-yashvi@dal.ca	select * from books;	2021-08-05T02:19:38.092318300
-yashvi@dal.ca	transaction;	2021-08-05T02:19:38.098308700
+deekshasareen@gmail.com	use test;	2021-08-05T00:27:46.354522100
+deekshasareen@gmail.com	use test;	2021-08-05T00:27:46.558859500
+deekshasareen@gmail.com	select * from test where id = 2 or id = 1;	2021-08-05T00:28:36.214092200
+deekshasareen@gmail.com	use test;	2021-08-05T00:30:26.580343300
+deekshasareen@gmail.com	use test;	2021-08-05T00:30:26.583346400
+deekshasareen@gmail.com	select * from test where #id = 2 or #id = 1;	2021-08-05T00:30:34.454437500
+deekshasareen@gmail.com	use test;	2021-08-05T00:32:16.407405
+deekshasareen@gmail.com	use test;	2021-08-05T00:32:16.409403100
+deekshasareen@gmail.com	select * from test where id = 2 or id = 1;	2021-08-05T00:32:19.068826200
+deekshasareen@gmail.com	use test;	2021-08-05T00:33:26.387203200
+deekshasareen@gmail.com	use test;	2021-08-05T00:33:26.389204100
+deekshasareen@gmail.com	select * from test where id=2 or id=1;	2021-08-05T00:33:34.065695300
+deekshasareen@gmail.com	use test;	2021-08-05T00:38:53.906202900
+deekshasareen@gmail.com	use test;	2021-08-05T00:38:54.058314300
+deekshasareen@gmail.com	select * from deeksha where id = 0 or id = 3;	2021-08-05T00:39:10.806000200
+deekshasareen@gmail.com	select * from test where id = 1;	2021-08-05T01:26:40.199019900
+deekshasareen@gmail.com	use test;	2021-08-05T01:27:35.432391900
+deekshasareen@gmail.com	use test;	2021-08-05T01:27:35.538194800
+deekshasareen@gmail.com	select * from deeksha where id = 1 or id = 2;	2021-08-05T01:28:09.497112500
+deekshasareen@gmail.com	select * from demo where id = 1;	2021-08-05T01:31:45.319455600
+deekshasareen@gmail.com	insert into table where values ;	2021-08-05T01:33:02.710796300
+deekshasareen@gmail.com	insert into student values id , deeksha, sareen;	2021-08-05T01:34:46.629807700
+deekshasareen@gmail.com	use test;	2021-08-05T01:34:51.188436600
+deekshasareen@gmail.com	use test;	2021-08-05T01:34:51.189435
+deekshasareen@gmail.com	insert into student values id , deeksha, sareen;	2021-08-05T01:35:01.528829600
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (1,'testing1', 'testing2');	2021-08-05T01:35:57.321706600
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (3,'testing1', 'testing2');	2021-08-05T01:39:39.795300700
+deekshasareen@gmail.com	create table demo(id int primary key, name varchar(100), number int, foreign key name references test(last_name);	2021-08-05T01:43:16.284905200
+deekshasareen@gmail.com	create table demo(id int primary key, name varchar(100), number int, foreign key name references test(last_name));	2021-08-05T01:43:54.475142500
+deekshasareen@gmail.com	generate erd;	2021-08-05T01:47:35.174583400
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (2,'testing3', 'testing2');	2021-08-05T01:53:18.958271500
+deekshasareen@gmail.com	create table demo2(id int primary key, name varchar(100), number int, foreign key name references test(last_name));	2021-08-05T01:53:18.966256700
+deekshasareen@gmail.com	use testl	2021-08-05T01:53:41.009569500
+deekshasareen@gmail.com	use test;	2021-08-05T01:53:45.072421200
+deekshasareen@gmail.com	use test;	2021-08-05T01:53:45.074423100
+deekshasareen@gmail.com	create table demo2(id int primary key, name varchar(100), number int, foreign key name references test(last_name));	2021-08-05T01:54:48.744608700
+deekshasareen@gmail.com	use test;	2021-08-05T01:55:10.549500700
+deekshasareen@gmail.com	use test;	2021-08-05T01:55:10.554505700
+deekshasareen@gmail.com	create table demo2(id int primary key, name varchar(100), number int, foreign key name references test(last_name));	2021-08-05T01:55:29.167187400
+deekshasareen@gmail.com	use test;	2021-08-05T02:02:45.246954600
+deekshasareen@gmail.com	use test;	2021-08-05T02:02:45.799780700
+deekshasareen@gmail.com	select * from deeksha where id = 1 or id = 2;	2021-08-05T02:04:01.974729800
+deekshasareen@gmail.com	insert into demo (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-05T02:04:02.127118800
+deekshasareen@gmail.com	transaction;	2021-08-05T02:04:02.341148400
+deekshasareen@gmail.com	insert into demo (id, name ,number) values (1,'Deeksha', 2345);	2021-08-05T02:06:36.163914200
+deekshasareen@gmail.com	select * from deeksha where id = 1 or id = 2;	2021-08-05T02:06:36.274326
+deekshasareen@gmail.com	transaction;	2021-08-05T02:06:36.301189900
+deekshasareen@gmail.com	insert into demo (id, name ,number) values (1,'Deeksha', 2345);	2021-08-05T02:07:08.369722100
+deekshasareen@gmail.com	select * from deeksha where id = 1 or id = 2;	2021-08-05T02:07:08.377730100
+deekshasareen@gmail.com	2commit;	2021-08-05T02:07:08.380730800
+deekshasareen@gmail.com		2021-08-05T02:07:08.381734300
+deekshasareen@gmail.com	transaction;	2021-08-05T02:07:08.384733200
+deekshasareen@gmail.com	insert into demo (id, name ,number) values (1,'Deeksha', 2345);	2021-08-05T02:08:17.872037700
+deekshasareen@gmail.com	select * from deeksha where id = 1 or id = 2;	2021-08-05T02:08:17.880042900
+deekshasareen@gmail.com	transaction;	2021-08-05T02:08:17.885046500
+deekshasareen@gmail.com	transaction;	2021-08-05T02:16:29.804017800
+deekshasareen@gmail.com	use test;	2021-08-05T02:16:31.311777400
+deekshasareen@gmail.com	use test;	2021-08-05T02:16:31.509531500
+deekshasareen@gmail.com	transaction;	2021-08-05T02:43:59.074415600
+deekshasareen@gmail.com	use test;	2021-08-05T02:44:23.684749700
+deekshasareen@gmail.com	use test;	2021-08-05T02:44:23.770001500
+deekshasareen@gmail.com	select * from deeksha;	2021-08-05T02:47:40.437189100
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (6, 'testcase' ,'testvalue');	2021-08-05T02:47:40.546184100
+deekshasareen@gmail.com	transaction;	2021-08-05T02:47:40.807296
+deekshasareen@gmail.com	transaction	2021-08-05T02:48:52.667036900
+deekshasareen@gmail.com	transaction;	2021-08-05T02:49:14.570830900
+deekshasareen@gmail.com	use test;	2021-08-05T02:51:03.243215700
+deekshasareen@gmail.com	use test;	2021-08-05T02:51:03.245220400
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (6, 'testcase' ,'testvalue');	2021-08-05T02:51:08.299295200
+deekshasareen@gmail.com	use test;	2021-08-05T02:52:09.986435500
+deekshasareen@gmail.com	use test;	2021-08-05T02:52:09.989437600
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (6, 'testcase' ,'testvalue');	2021-08-05T02:52:12.040942800
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (7, 'testcase' ,'testvalue');	2021-08-05T02:52:25.738856700
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (8, 'testcase' ,'testvalue');	2021-08-05T03:01:52.917865100
+deekshasareen@gmail.com	use test;	2021-08-05T03:02:56.603020700
+deekshasareen@gmail.com	use test;	2021-08-05T03:02:56.625164200
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (8, 'testcase' ,'testvalue');	2021-08-05T03:03:15.970305600
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (9, 'testcase' ,'testvalue');	2021-08-05T03:03:30.232029200
+deekshasareen@gmail.com	use test;	2021-08-05T03:19:32.753784300
+deekshasareen@gmail.com	use test;	2021-08-05T03:19:32.887716800
+deekshasareen@gmail.com	insert into student (id, name, last_name) values (7, 'testcase' ,'testvalue');	2021-08-05T03:19:39.093935700
+deekshasareen@gmail.com	use test;	2021-08-05T04:38:26.222385400
+deekshasareen@gmail.com	use test;	2021-08-05T04:38:26.288502300
+deekshasareen@gmail.com		2021-08-05T04:39:00.536494
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-05T04:39:05.263039400
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (2,'Deeksha', 'Sareen');	2021-08-05T04:39:10.678408900
+deekshasareen@gmail.com	use test;	2021-08-05T04:42:48.779203100
+deekshasareen@gmail.com	use test;	2021-08-05T04:42:48.781204600
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-05T04:42:54.302680200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Deeksha', 'Sareen');	2021-08-05T04:43:00.469934300
+deekshasareen@gmail.com	use test;	2021-08-05T04:44:24.658953100
+deekshasareen@gmail.com	use test;	2021-08-05T04:44:24.661955200
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Deeksha', 'Sareen');	2021-08-05T04:44:29.252248100
+deekshasareen@gmail.com	use testl	2021-08-05T04:46:29.530047
+deekshasareen@gmail.com	use test;	2021-08-05T04:46:33.567387300
+deekshasareen@gmail.com	use test;	2021-08-05T04:46:33.569392900
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-05T04:46:47.372243400
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Deeksha', 'Sareen');	2021-08-05T04:46:56.665652500
+deekshasareen@gmail.com	use test;	2021-08-05T04:57:20.632561300
+deekshasareen@gmail.com	use test;	2021-08-05T04:57:20.671070800
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (1,'Deeksha', 'Sareen');	2021-08-05T04:57:43.939045900
+deekshasareen@gmail.com	insert into student (id, name ,last_name) values (3,'Deeksha', 'Sareen');	2021-08-05T04:57:55.488251300

@@ -26,7 +26,7 @@ public class Common {
 		return common;
 	}
 
-	public void takeinput() throws IOException {
+	public void takeinput() throws IOException, InterruptedException {
 
 		System.out.println("Enter query ~");
 		Scanner scanner = new Scanner(System.in);
