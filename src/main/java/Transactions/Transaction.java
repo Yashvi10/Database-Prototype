@@ -1,5 +1,6 @@
 package Transactions;
 
+import logs.TransactionRecord;
 import parser.selectExecutioner;
 import user.application;
 
@@ -23,12 +24,13 @@ public class Transaction {
       list.add(str);
     }
 
-    System.out.println(list);
     for(int i = 0;i<list.size();i++) {
       application app = new application();
       String[] value = list.get(i).split(" ");
 //      app.Application();
     }
+    TransactionRecord transactionRecord = new TransactionRecord();
+    transactionRecord.transactionLog(list);
   }
 
 
