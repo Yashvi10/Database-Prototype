@@ -11,7 +11,7 @@ import Resources.Database;
 import Resources.regex;
 
 /**
- * @author Deeksha Sareen
+ * @author Deeksha Sareen: Insert query executioner
  *
  */
 public class insertParser {

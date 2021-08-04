@@ -1,6 +1,37 @@
-csci5408	Database Created Successfully!	Executed in 0ms
-csci5408	Already exists! Executed in 0ms
-table1	Table Created Successfully!	Executed in 3377ms
-table1	Already exists! Executed in 2727ms
-krina	Schema does not exist! Executed in 0ms
-
+yashvi@dal.ca	csci5308	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	csci5001	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db1	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	data	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	d	Database Created Successfully!	Executed in 1ms
+yashvi@dal.ca	update ttt set lname='sareen' where id=1	Query executed successfully! Executed in 80ms
+yashvi@dal.ca	db2	Database Created Successfully!	Executed in 9ms
+yashvi@dal.ca	db3	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db5	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db6	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db1	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db2	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db2	Database Created Successfully!	Executed in 1ms
+yashvi@dal.ca	db3	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 20ms
+yashvi@dal.ca	db1	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db2	Database Created Successfully!	Executed in 1ms
+v@dal.ca	db3	Database Created Successfully!	Executed in 0ms
+d@dal.ca	db4	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+v@dal.ca		Table Created Successfully!	Executed in 1ms
+d@dal.ca		Table Created Successfully!	Executed in 2ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 27ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+yashvi@dal.ca	Yashvi	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca	db	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 2ms
+yashvi@dal.ca	yashvi	Database Created Successfully!	Executed in 0ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms
+d@dal.ca	deeksha	Database Created Successfully!	Executed in 0ms
+d@dal.ca		Table Created Successfully!	Executed in 1ms
+v@dal.ca	vaishnavi	Database Created Successfully!	Executed in 0ms
+v@dal.ca		Table Created Successfully!	Executed in 2ms
+yashvi@dal.ca		Table Created Successfully!	Executed in 1ms

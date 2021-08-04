@@ -1,0 +1,3 @@
+
+create database deeksha;
+databases/deeksha	create table customers(customer_id int,customer_name varchar(100));

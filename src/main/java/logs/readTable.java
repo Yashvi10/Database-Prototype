@@ -1,5 +1,6 @@
 package logs;
 
+import Resources.UserID;
 import user.login;
 
 import java.io.File;
@@ -23,7 +24,7 @@ public class readTable {
    * */
   public static void print(String output) {
     LocalDateTime localDateTime = LocalDateTime.now();
-    login login = new login();
+
     if (fileOut) {
 
       String path = "LogAndDumpFiles/QueryLogs/queryLog.txt";
@@ -32,7 +33,7 @@ public class readTable {
 
         FileWriter fileWriter = new FileWriter(file, true);
 
-        fileWriter.write(user.login.getEmail_id() + "\t" + output + "\t" + localDateTime + "\n");
+        fileWriter.write(UserID.getUserID() + "\t" + output + "\t" + localDateTime + "\n");
 
         fileWriter.flush();
         fileWriter.close();
